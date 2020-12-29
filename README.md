@@ -18,3 +18,6 @@
 - Imports: glmnet (>= 2.0.16), rTensor (>= 1.3), Matrix (>= 1.2.17), MASS
         (>= 7.3.51.1), stringr (>= 1.4.0), stats (>= 3.5.2)
 - Depends: R (>= 3.5.2)
+
+# Example 
+- ?broadcasted_sparsetenreg
