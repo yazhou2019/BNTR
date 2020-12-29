@@ -12,6 +12,7 @@
 - Type: Package
 - Title: Broadcasted Nonparametric Tensor Regression
 - Version: 0.1.0
+- Author: Ya Zhou, Raymond Wong, Kejun He
 - Maintainer: Ya Zhou <zdy1224@icloud.com>
 - Description: Train the broadcasted nonparametric tensor regression model, and make prediction.
 - License: GPL-3
