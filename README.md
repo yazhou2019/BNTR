@@ -20,4 +20,4 @@
 - Depends: R (>= 3.5.2)
 
 # Example 
-- ?broadcasted_sparsetenreg
+- You can type "?broadcasted_sparsetenreg" in the R environment and you will see the example.
