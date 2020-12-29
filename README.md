@@ -21,6 +21,9 @@
 
 # Example 
 ```markdown
+
+install.packages("./BNTR_0.1.0.tar.gz", repos = NULL, type = "source")
+
 library(BNTR)
 
 # load the true coefficient tensor (matrix)
