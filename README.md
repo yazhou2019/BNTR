@@ -1,7 +1,7 @@
 # BNTR package
 - R Code (package) for the paper Broadcasted Nonparametric Tensor Regression (https://arxiv.org/abs/2008.12927). 
 - Thank you for your interest in our work! This is a very old version. I will create a better R package later when I have time.
-- 各位老师同学朋友同事，感谢您对我们工作的关注！这是一个很早的版本。等有时间了我再制作一个更好的R包。
+- 感谢您对我们工作的关注！这是一个很早的版本。等有时间了我再制作一个更好的R包。
 
 
 
