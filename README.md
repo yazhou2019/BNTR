@@ -1,12 +1,18 @@
-# BNTR package
-- R Code (package) for the paper Broadcasted Nonparametric Tensor Regression. 
-- Thank you for your interest in our work! This is a very old version. I will create a better R package later when I have time.
+# BNTR: Broadcasted Nonparametric Tensor Regression
+- This package implements the method proposed in Y. Zhou, Wong, & He (2020). 
+- Thank you for your interest in our work! This is a very old version. We will create a better R package later when we have time.
 
+# Installation
+This package can be installed via function install_github in R package devtools:
+```markdown
+#install.packages("./BNTR_0.1.0.tar.gz", repos = NULL, type = "source")
+install.packages("devtools")
+devtools::install_github("yazhou2019/BNTR/BNTR")
+```
 
 # Example 
 ```markdown
 
-install.packages("./BNTR_0.1.0.tar.gz", repos = NULL, type = "source")
 
 library(BNTR)
 
