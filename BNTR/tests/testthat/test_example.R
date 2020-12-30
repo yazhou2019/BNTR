@@ -1,15 +1,3 @@
-# BNTR package
-- R Code (package) for the paper Broadcasted Nonparametric Tensor Regression. 
-- Thank you for your interest in our work! This is a very old version. I will create a better R package later when I have time.
-
-
-# Example 
-```markdown
-
-install.packages("./BNTR_0.1.0.tar.gz", repos = NULL, type = "source")
-
-library(BNTR)
-
 # load the true coefficient tensor (matrix)
 data("X_horse")
 BB <- X_horse
@@ -57,14 +45,14 @@ tildePhiX_train = tildePhiX_trans(X_train, knots)
 
 # BroadcasTR
 if (input_initial == 1) {
- data("initial_point")
- beta0 <- initial_point$beta0
- B0 <- initial_point$B0
- warmstart <- 0
+  data("initial_point")
+  beta0 <- initial_point$beta0
+  B0 <- initial_point$B0
+  warmstart <- 0
 } else {
-beta0 <- NA
- B0 <- NA
- warmstart <- 1
+  beta0 <- NA
+  B0 <- NA
+  warmstart <- 1
 }
 res = broadcasted_sparsetenreg(tildePhiX_train, y_train, r = rank, lambda = lambda_1, alpha = lambda_2, warmstart = warmstart, beta0 = beta0, B0=B0, Replicates=1)
 
@@ -89,9 +77,3 @@ y_pre = res$beta0 + crossprod(matrix(tildePhiX_test, c(prod(dim(full_R(res$beta)
 
 # prediction performance
 cat("The prediction performance in these tunning parameters: \n", "MSPE =", sum((y_test - y_pre)^2)/n_test, "\n")
-
-
-```
-
-# References
-Zhou, Y., Wong, R. K. W., & He, K. (2020). Broadcasted nonparametric tensor regression. arXiv preprint arXiv:2008.12927. [\[link\]](https://arxiv.org/abs/2008.12927)
