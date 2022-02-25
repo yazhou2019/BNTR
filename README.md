@@ -10,7 +10,7 @@ install.packages("devtools")
 devtools::install_github("yazhou2019/BNTR/BNTR")
 ```
 
-<!--# Example 1 -->
+# Example 1 
 ```markdown
 
 
@@ -99,7 +99,7 @@ cat("The prediction performance in these tunning parameters: \n", "MSPE =", sum(
 
 ```
 
-<!--# Example 2 -->
+# Example 2 
 If you have already installed relavent R packages (including snow and so on) in a linux server with multiple CPUs, you can set ./experiments/example as working directory and run the following code to do parallel computing for the simulation in the paper. The tuning parameters of models can be tuned in "/ParallelComput/parallel_source.R" and the number of CPUs used in the computing can be set in "/ParallelComput/parallel_replications.R" .
 
 ```markdown
