@@ -1,6 +1,6 @@
 # BNTR: Broadcasted Nonparametric Tensor Regression
 - This package implements the method proposed in Y. Zhou, Wong, & He (2020). 
-- Thank you for your interest in our work! This is a very old version. We will create a better R package later when we have time.
+
 
 # Installation
 This package can be installed via function install_github in R package devtools:
@@ -10,7 +10,7 @@ install.packages("devtools")
 devtools::install_github("yazhou2019/BNTR/BNTR")
 ```
 
-# Example 
+<!--# Example 1 -->
 ```markdown
 
 
@@ -98,6 +98,15 @@ cat("The prediction performance in these tunning parameters: \n", "MSPE =", sum(
 
 
 ```
+
+<!--# Example 2 -->
+If you have already installed relavent R packages (including snow and so on) in a linux server with multiple CPUs, you can set ./experiments/example as working directory and run the following code to do parallel computing for the simulation in the paper. The tuning parameters of models can be tuned in "/ParallelComput/parallel_source.R" and the number of CPUs used in the computing can be set in "/ParallelComput/parallel_replications.R" .
+
+```markdown
+nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 &
+```
+
+
 
 # References
 Zhou, Y., Wong, R. K. W., & He, K. (2020). Broadcasted nonparametric tensor regression. arXiv preprint arXiv:2008.12927. [\[link\]](https://arxiv.org/abs/2008.12927)
