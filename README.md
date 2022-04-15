@@ -98,15 +98,15 @@ cat("The prediction performance in these tunning parameters: \n", "MSPE =", sum(
 
 # Example 2: for simulations in the paper 
 If you have already installed relavent R packages (including snow and related ones) in a linux server with multiple CPUs, you can reproduce the simulation in the following steps. 
-###1. download all the codes in the repository
-###2. set the tuning parameters in "./experiments/example/ParallelComput/parallel_source.R"
-###3. set the number of CPUs in "./experiments/example/ParallelComput/parallel_replications.R" 
-###4. set "./experiments/example" as the working directory 
-###5. run the following code in the command line
+##Step 1. download all the codes in the repository
+##Step 2. set the tuning parameters in "./experiments/example/ParallelComput/parallel_source.R"
+##Step 3. set the number of CPUs in "./experiments/example/ParallelComput/parallel_replications.R" 
+##Step 4. set "./experiments/example" as the working directory 
+##Step 5. run the following code in the command line
 ```markdown
 nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 &
 ```
-###6. obtain the results when it is done
+##Step 6. obtain the results in "./experiments/example/SimResults"  when Step 5 is done
 
 
 
