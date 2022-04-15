@@ -10,7 +10,7 @@ install.packages("devtools")
 devtools::install_github("yazhou2019/BNTR/BNTR")
 ```
 
-# Example 1:a toy demonstration 
+# Example 1: for a 32-by-32 input
 ```markdown
 
 
