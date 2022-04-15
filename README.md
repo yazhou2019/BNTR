@@ -76,7 +76,7 @@ tildePhiX_train = tildePhiX_trans(X_train, knots)
 res = broadcasted_sparsetenreg(tildePhiX_train, y_train, r = rank, lambda = lambda_1, alpha = lambda_2, warmstart = warmstart, beta0 = beta0, B0=B0, Replicates=1)
 
 
-###########important region##################
+###########important region##########
 # norm tensor
 normtensor <- fhatnorm_ten(full_R(res$beta), knots)
 par(mar = c(0, 0, 0, 0), mfcol = c(1, 2), mai = c(0.2, 0.4, 0.4, 0.2))
@@ -88,7 +88,7 @@ mtext("Estimated norm tensor (matrix)", 3, line = 0.2)
 rasterImage(normtensor, 0, 0, dim(BB)[1] + 1, dim(BB)[2] + 1)
 
 
-###########test##################
+###########test#####################
 # prediction on the test set
 tildePhiX_test = tildePhiX_trans(X_test, knots)
 y_pre = res$beta0 + crossprod(matrix(tildePhiX_test, c(prod(dim(full_R(res$beta))), n_test)), as.vector(full_R(res$beta)))
