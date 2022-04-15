@@ -11,7 +11,7 @@ devtools::install_github("yazhou2019/BNTR/BNTR")
 ```
 
 # Example 1: for a 32-by-32 input
-The following is a simple example for the 32-by-32 input. It only takes several seconds.
+The following is a simple example for the 32-by-32 input. It takes about 20 seconds.
 
 ```markdown
 library(BNTR)
