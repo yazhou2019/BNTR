@@ -12,8 +12,6 @@ devtools::install_github("yazhou2019/BNTR/BNTR")
 
 # Example 1: for a 32-by-32 input
 ```markdown
-
-
 library(BNTR)
 
 
@@ -21,12 +19,11 @@ library(BNTR)
 #### simulate data ####
 #######################
 
+
 # load the true coefficient tensor (matrix)
 data("X_horse")
 BB <- X_horse
-
 set.seed(2019)
-
 # sample size of the training and test set
 n_train <- 400
 n_test <- 100
@@ -46,7 +43,6 @@ y_test = 1 + crossprod(matrix(BroX_test, c(prod(dim(BB)), n_test)), as.vector(BB
 ###########################################
 ##### BroadcasTR ####
 ###########################################
-
 
 
 ############tuning paramters###############
@@ -72,13 +68,10 @@ beta0 <- NA
 num_knots <- 5
 knots = quantile(c(X_train), probs = c(seq(0, 1, 1/(num_knots - 1))))
 
+
 ###########training##################
 tildePhiX_train = tildePhiX_trans(X_train, knots)
 res = broadcasted_sparsetenreg(tildePhiX_train, y_train, r = rank, lambda = lambda_1, alpha = lambda_2, warmstart = warmstart, beta0 = beta0, B0=B0, Replicates=1)
-
-
-
-
 
 
 ###########important region##################
@@ -97,7 +90,6 @@ rasterImage(normtensor, 0, 0, dim(BB)[1] + 1, dim(BB)[2] + 1)
 # prediction on the test set
 tildePhiX_test = tildePhiX_trans(X_test, knots)
 y_pre = res$beta0 + crossprod(matrix(tildePhiX_test, c(prod(dim(full_R(res$beta))), n_test)), as.vector(full_R(res$beta)))
-
 # prediction performance
 cat("The prediction performance in these tunning parameters: \n", "MSPE =", sum((y_test - y_pre)^2)/n_test, "\n")
 
