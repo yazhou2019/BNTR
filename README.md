@@ -54,7 +54,7 @@ rank <- 4
 # the tuning parameters of the elastic net penalty
 lambda_1 <- 5
 lambda_2 <- 0.5  # 0 corresponds to lasso; 1 corresponds to ridge
-# use the initial point from the sequential down-sizing strategy (1) or not (0, sequential warmstart)
+# use the initial point from the sequential down-sizing procedure (1) or not (0). if not, we adopt a sequential warmstart descriped in the paper.
 input_initial <- 0
 if (input_initial == 1) {
  data("initial_point")
