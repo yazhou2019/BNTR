@@ -110,7 +110,8 @@ nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 &
 ```
 - Step 6. obtain the results in "./experiments/example/SimResults"  when Step 5 is done
 
-
+# Example 3: for new simulations in the paper
+The new simulation data is located in "./experiments/new_simulations"
 
 
 
