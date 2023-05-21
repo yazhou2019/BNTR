@@ -114,7 +114,8 @@ nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 &
 The new simulation data is located in "./experiments/new_simulation".
 - Fully synthetic data: "./experiments/new_simulation/FullSimPaper"
 - Simulated monkey’s electrocorticography data: "./experiments/new_simulation/RealDataSim"
-The algorithm can be implemented as Example 2
+
+The algorithm can be implemented as Example 2.
 
 
 
