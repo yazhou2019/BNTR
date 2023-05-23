@@ -44,7 +44,7 @@ data_all[[52]] = v
 
 filename <- str_c("Simul_n", n_all, "_rep50_final_fix_new.Rdata")
 setwd("./SimResults")
-#save(data_all,file = filename)
+save(data_all,file = filename)
 setwd("../")
 
 
