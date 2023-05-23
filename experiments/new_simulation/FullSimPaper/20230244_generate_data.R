@@ -1,4 +1,4 @@
-#setwd("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper")
+#generate the simulation data
 
 source('./ComponentsNonLin/functions_needed.R')
 source('./ComponentsNonLin/sequential_warmstart.R')
