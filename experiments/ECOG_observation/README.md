@@ -1,4 +1,4 @@
-# Data preprocese for monkey ECOG data.
+# Data preprocess for ECOG data.
 - Step 1. Download the data from http://neurotycho.org/expdatalist/listview?task=67
 - Step 2. Run "01Read_preprocessing.R" in R
 - Step 3. Run "02Wavenet_preprocessing.m" in MATLAB
