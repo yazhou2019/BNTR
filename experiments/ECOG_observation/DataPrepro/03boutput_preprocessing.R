@@ -20,10 +20,3 @@ y_all[4001:10000]=y_test
 
 save(y_all,file="y_all.Rdata")
 
-#save the output
-
-#for big data set
-#y=read.table('y_1_big.csv',col.names = F)
-#Y_big=y
-
-#save(Y_big,file="y_output_1_big.Rdata")
