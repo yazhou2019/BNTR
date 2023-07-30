@@ -1,0 +1,1 @@
+source('./ParallelComput/parallel_get_ise_linear.R')
