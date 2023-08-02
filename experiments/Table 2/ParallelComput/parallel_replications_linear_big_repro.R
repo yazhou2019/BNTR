@@ -22,7 +22,7 @@ wrapper <- function(idx) {
     return(BB_idx)
 }
 
-sfSource('./ParallelComput/parallel_source_linear.R')
+sfSource('./ParallelComput/parallel_source_linear_repro.R')
 
 sfClusterSetupRNG()
 

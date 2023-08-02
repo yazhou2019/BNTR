@@ -41,8 +41,10 @@ lambda=c(0.001,0.0025,0.005,0.0075,0.01,0.025,0.05,0.075,0.1,0.25,0.5,0.75,1,2.5
 
 
 # load the input
-load("/home/grad/zhou/monkey_1/X_test_1.Rdata")
-load("/home/grad/zhou/monkey_1/X_train_1.Rdata")
+#load("/home/grad/zhou/monkey_1/X_test_1.Rdata")
+#load("/home/grad/zhou/monkey_1/X_train_1.Rdata")
+load("./data/X_test_1.Rdata")
+load("./data/X_train_1.Rdata")
 # load("/home/grad/zhou/monkey_1/X_basis_test_monkey_1.Rdata")
 # load("/home/grad/zhou/monkey_1/X_basis_train_monkey_1.Rdata")
 
@@ -78,6 +80,11 @@ gc()
 #    idtrain_matrix[iter,]=idtrain
 #    idtest_matrix[iter,]=idtest
 #}
-load("/home/grad/zhou/gridsearch/monkey1/y_all.Rdata")
-load("/home/grad/zhou/gridsearch/monkey1/idtest_matrix.Rdata")
-load("/home/grad/zhou/gridsearch/monkey1/idtrain_matrix.Rdata")
+
+load("./data/y_all.Rdata")
+load("./data/idtest_matrix.Rdata")
+load("./data/idtrain_matrix.Rdata")
+
+#load("/home/grad/zhou/gridsearch/monkey1/y_all.Rdata")
+#load("/home/grad/zhou/gridsearch/monkey1/idtest_matrix.Rdata")
+#load("/home/grad/zhou/gridsearch/monkey1/idtrain_matrix.Rdata")

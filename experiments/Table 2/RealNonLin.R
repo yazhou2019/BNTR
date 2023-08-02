@@ -1,2 +1,2 @@
 
-source('./ParallelComput/parallel_replications_big12.R', echo=TRUE)
+source('./ParallelComput/parallel_replications_big_repro_K11.R', echo=TRUE)

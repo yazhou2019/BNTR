@@ -12,8 +12,11 @@ alpha=c(0,0.5,1)
 lambda=c(0.001,0.0025,0.005,0.0075,0.01,0.025,0.05,0.075,0.1,0.25,0.5,0.75,1,2.5,5,7.5,10,25,50,75,100,250,500,750,1000)
 
 # load the input
-load("/home/grad/zhou/monkey_1/X_test_1.Rdata")
-load("/home/grad/zhou/monkey_1/X_train_1.Rdata")
+#load("/home/grad/zhou/monkey_1/X_test_1.Rdata")
+#load("/home/grad/zhou/monkey_1/X_train_1.Rdata")
+
+load("./data/X_test_1.Rdata")
+load("./data/X_train_1.Rdata")
 
 
 X_all=array(0,c(64,10,10,10000))
@@ -25,7 +28,11 @@ rm(X_train)
 rm(X_test)
 gc()
 
-load("/home/grad/zhou/gridsearch/monkey1/y_all.Rdata")
-load("/home/grad/zhou/gridsearch/monkey1/idtest_matrix.Rdata")
-load("/home/grad/zhou/gridsearch/monkey1/idtrain_matrix.Rdata")
+load("./data/y_all.Rdata")
+load("./data/idtest_matrix.Rdata")
+load("./data/idtrain_matrix.Rdata")
+
+#load("/home/grad/zhou/gridsearch/monkey1/y_all.Rdata")
+#load("/home/grad/zhou/gridsearch/monkey1/idtest_matrix.Rdata")
+#load("/home/grad/zhou/gridsearch/monkey1/idtrain_matrix.Rdata")
 
