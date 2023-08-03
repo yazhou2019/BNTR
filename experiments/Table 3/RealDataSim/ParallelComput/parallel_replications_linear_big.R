@@ -34,6 +34,6 @@ result <- sfLapply(1:10, wrapper)
 
 sfStop()
 filename <- str_c("TLR2_", "linear_new_sim_new2.Rdata")
-setwd("./RealResults")
+setwd("./SimResults")
 save(result,file = filename)
 setwd("../")
