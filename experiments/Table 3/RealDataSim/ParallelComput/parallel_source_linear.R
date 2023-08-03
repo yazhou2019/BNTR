@@ -25,7 +25,7 @@ rm(X_train)
 rm(X_test)
 gc()
 
-load("./data/y_all_sim_new.Rdata")
+load("./data/y_all_sim_new2.Rdata")
 load("./data/idtest_matrix.Rdata")
 load("./data/idtrain_matrix.Rdata")
 

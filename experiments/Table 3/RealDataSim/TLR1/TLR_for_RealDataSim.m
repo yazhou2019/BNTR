@@ -21,17 +21,10 @@ X_all(:,:,:,1:4000)=X_train;
 X_all(:,:,:,4001:10000)=X_test;
 
 
-%y_train=load('y_train_1_MATLAB.mat');
-%y_train=y_train.y_train;
-%y_test=load('y_test_1_MATLAB.mat');
-%y_test=y_test.y_test;
-%y_all=vertcat(y_train,y_test);
-load('y_all_sim2.mat')
 
-%idtrain_matrix=load('idtrain_matrix_ECOG_MATLAB');
-%idtrain_matrix=idtrain_matrix.idtrain_matrix;
-%idtest_matrix=load('idtest_matrix_ECOG_MATLAB');
-%idtest_matrix=idtest_matrix.idtest_matrix;
+y_all=load('y_all_sim2.mat');
+y_all=y_all.y_all;
+
 load('idtrain_matrix_MATLAB.mat')
 load('idtest_matrix_MATLAB.mat')
 

@@ -6,7 +6,7 @@
 - The code depends on the MATLAB code in https://hua-zhou.github.io/TensorReg/
 - The real data in .Rdata format need to be transformed to the .mat format; see ./TLR1/Data_generation_to_MATLAB_ECoG.R.
 - X_train_1.Rdata, X_test_1.Rdata, y_all.Rdata need to put in the file ./TLR1/data
-
+- run TLR_for_ECoG.m and you will obtain the fitting result.
 
 # BroadcasTR, TLR-rescaled, ENetR
 - See RealNonLin.R, RealTLR-rescaled.R,and RealENet.R, respectively
