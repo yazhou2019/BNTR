@@ -1,19 +1,22 @@
-#setwd("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper")
+setwd("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper")
 source('./ComponentsNonLin/functions_needed.R')
 source('./ComponentsNonLin/sequential_warmstart.R')
 source('./ComponentsNonLin/broadcasted_sparsetenreg.R')
 source('./ComponentsNonLin/validation_broadcasted_sparsetenreg.R')
+#source('./SimDataGeneration_new/20221018_get_outputs.R', echo=FALSE)
+#source('./SimDataGeneration_new/20221018_get_ise.R', echo=FALSE)
 source('./SimDataGeneration_He/20230224_get_outputs.R', echo=FALSE)
 source('./SimDataGeneration_He/20230224_get_ise.R', echo=FALSE)
-#source("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimDataGeneration_He/20230224_get_BB.R")
-source("./SimDataGeneration_He/20230224_get_BB.R")
 
+#source("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/get_true_normtensor.R")
+
+source("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimDataGeneration_He/20230224_get_BB.R")
 #Plot for comparison
 library(BNTR)
 ##All the plot
 p=c(64,64)
 
-#png("temtemtem.png",units="in", width=8, height=8,res=300)
+png("temtemtem.png",units="in", width=8, height=8,res=300)
 
 par(mar = c(0,0,0,0),mfcol=c(5,5),mai=c(0.05,0.2,0.3,0.01))
 
@@ -76,39 +79,30 @@ for(method_i in 1:4){
   #load the data
   if(method=="TLR1"){
    
-    # path1 = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/TLR1/ise_TLR1_",n,"_20230302.Rdata")
-    # path2 = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/TLR1/TLR1_", n, "_20230302.Rdata")
-    path1 = str_c("./TLR1/TLR1_",n,"_20230302.Rdata")
-    path2 = str_c("./TLR1/ise_TLR1_", n, "_20230302.Rdata")
-    
+    path1 = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/TLR1/TLR1_",n,"_20230302.Rdata")
+    path2 = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/TLR1/TLR1_", n, "_20230302.Rdata")
     signal="TLR"
   }
   
   
   if(method =="BNTR"){
-    # path1 = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimResults/BNTR",n,"_new_K8_20230302.Rdata")
-    # path2 = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimResults/ise_BNTR", n, "_new_K8_20230302.Rdata")
-    path1 = str_c("./SimResults/BNTR",n,"_new_K8_20230302.Rdata")
-    path2 = str_c("./SimResults/ise_BNTR", n, "_new_K8_20230302.Rdata")
+   # path1 = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimResults/BNTR",n,"_new_K8_20230103.Rdata")
+   # path2 = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimResults/ise_BNTR", n, "_new_K8_20230103_rank1_8.Rdata")
+    path1 = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimResults/BNTR",n,"_new_K8_20230302.Rdata")
+    path2 = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimResults/ise_BNTR", n, "_new_K8_20230302.Rdata")
     
     signal = "BroadcasTR"
   }
   
   if(method=="TLR2"){
-    # path1 = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimResults/TLR2_",n, "_linear_new_20230302.Rdata")
-    # path2 = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimResults/ise_linear",n,"_new_K8_20230302.Rdata")
-    path1 = str_c("./SimResults/TLR2_",n, "_linear_new_20230302.Rdata")
-    path2 = str_c("./SimResults/ise_linear",n,"_new_K8_20230302.Rdata")
-    
+    path1 = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimResults/TLR2_",n, "_linear_new_20230302.Rdata")
+    path2 = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimResults/ise_linear",n,"_new_K8_20230302.Rdata")
     signal="TLR-rescaled"
   }
   
   if(method=="ENet"){
-    # path1 = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimResults/ENet_",n,"_new_20230302.Rdata")
-    # path2 = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimResults/ise_ENet", n,"_new_K8_20230302.Rdata")
-    path1 = str_c("./SimResults/ENet_",n,"_new_20230302.Rdata")
-    path2 = str_c("./SimResults/ise_ENet", n,"_new_K8_20230302.Rdata")
-    
+    path1 = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimResults/ENet_",n,"_new_20230302.Rdata")
+    path2 = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimResults/ise_ENet", n,"_new_K8_20230302.Rdata")
     signal = "ENetR"
   }
   
@@ -168,4 +162,5 @@ for(method_i in 1:4){
   
 }
 
-#dev.off()
+dev.off()
+#17.38909,111.01420  ,14.839368
