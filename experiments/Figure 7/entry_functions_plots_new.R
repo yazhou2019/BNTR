@@ -23,10 +23,13 @@
 # index_best = which.min(res$b_validation_test_lambda_R_nonlinear[,2])
 # BB_idx[[4]]=res$betabig[[index_best]]
 
-source("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/ComponentsNonLin/functions_needed.R")
+#source("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/ComponentsNonLin/functions_needed.R")
+
+source("./ComponentsNonLin/functions_needed.R")
 
 obtain_median_BNTR_iter <-function(){
-  load("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/data/monkey_1_new_K11_tuning.Rdata")
+  #load("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/data/monkey_1_new_K11_tuning.Rdata")
+  load("./data/monkey_1_new_K11_tuning.Rdata")
   mse_mat = matrix(0,10,2)
   for(iter in 1:10){
     mse_mat[iter, 1] = result[[iter]][[1]]
@@ -58,10 +61,12 @@ obtain_frue <- function(){
       }
     }
   }
-  load("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/data/truepara.Rdata")
+  #load("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/data/truepara.Rdata")
+  load("./data/truepara.Rdata")
   #bb = truepara$b
   BB = truepara$BB
-  load("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/data/knots_used.Rdata")
+  #load("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/data/knots_used.Rdata")
+  load("./data/knots_used.Rdata")
   tildePhiX = tildePhiX_trans(X, knots_used, order=4)
   for(i in 1:length(X_seq)){
     y[,,,i] = sum_axis_keepdim(BB, tildePhiX[,,,,i]) #+ bb
@@ -95,8 +100,10 @@ obtain_fhat <- function(method="BNTR", iter=1){
   }
   
   if(method=="BNTR"){
-    load("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/data/knots_used_list.Rdata")
-    load("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/SimResults/monkey_1_new_K11_tuning_sim_new2.Rdata")
+    #load("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/data/knots_used_list.Rdata")
+    #load("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/SimResults/monkey_1_new_K11_tuning_sim_new2.Rdata")
+    load("./data/knots_used_list.Rdata")
+    load("./SimResults/monkey_1_new_K11_tuning_sim_new2.Rdata")
     bb = result[[iter]][[3]][which.min(result[[iter]][[3]][,2]),1]
     BB = full_R(result[[iter]][[4]])
     tildePhiX = tildePhiX_trans(X, knots_used[[iter]], order=4)
@@ -106,7 +113,8 @@ obtain_fhat <- function(method="BNTR", iter=1){
   }
   
   if(method=="TLR_rescaled"){
-    load("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/SimResults/TLR2_linear_new_sim_new2.Rdata")
+    #load("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/SimResults/TLR2_linear_new_sim_new2.Rdata")
+    load("./SimResults/TLR2_linear_new_sim_new2.Rdata")
     BB = result[[iter]][[3]]
     for(i in 1:length(X_seq)){
       y[,,,i]= BB * X[,,,i]
@@ -115,7 +123,8 @@ obtain_fhat <- function(method="BNTR", iter=1){
   }
   
   if(method=="ENet"){
-    load("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/SimResults/ENet_real_20230103_2.Rdata")
+    #load("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/SimResults/ENet_real_20230103_2.Rdata")
+    load("./SimResults/ENet_real_20230103_2.Rdata")
     BB = result[[iter]][[iter]][[1]]
     for(i in 1:length(X_seq)){
       y[,,,i]= BB * X[,,,i]
@@ -124,7 +133,8 @@ obtain_fhat <- function(method="BNTR", iter=1){
   
   if(method=="TLR"){
     library(R.matlab)
-    tem = readMat("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/SimResults/BB_all_RealDataSim2.mat")
+    #tem = readMat("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/SimResults/BB_all_RealDataSim2.mat")
+    tem = readMat("./SimResults/BB_all_RealDataSim2.mat")
     BB=  tem$BB.all[,,,iter]
     for(i in 1:length(X_seq)){
       y[,,,i]= BB * X[,,,i]
@@ -167,18 +177,21 @@ obtain_entry_l2norm <-function(yhat_ten_list, ytrue_ten){
 obtain_BB <-function(method, iter){
   
   if(method=="TLR_rescaled"){
-    load("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/SimResults/TLR2_linear_new_sim_new2.Rdata")
+    #load("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/SimResults/TLR2_linear_new_sim_new2.Rdata")
+    load("./SimResults/TLR2_linear_new_sim_new2.Rdata")
     BB = result[[iter]][[3]]
   }
   
   if(method=="ENet"){
-    load("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/SimResults/ENet_real_20230103_2.Rdata")
+    #load("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/SimResults/ENet_real_20230103_2.Rdata")
+    load("./SimResults/ENet_real_20230103_2.Rdata")
     BB = result[[iter]][[iter]][[1]]
   }
   
   if(method=="TLR"){
     library(R.matlab)
-    tem = readMat("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/SimResults/BB_all_RealDataSim2.mat")
+    #tem = readMat("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/SimResults/BB_all_RealDataSim2.mat")
+    tem = readMat("./SimResults/BB_all_RealDataSim2.mat")
     BB=  tem$BB.all[,,,iter]
   }
   
@@ -294,11 +307,13 @@ obtain_index_list_BB <- function(qnum=1, abs_o=FALSE, method_name="TLR_rescaled"
   for(iter_index in 1:10){
     temp = round(quantile(1:6400, qnum))
     if(method_name == "TLR_rescaled"){
-      load("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/SimResults/TLR2_linear_new_sim_new2.Rdata")
+      #load("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/SimResults/TLR2_linear_new_sim_new2.Rdata")
+      load("./SimResults/TLR2_linear_new_sim_new2.Rdata")
       BB = result[[iter_index]][[3]]
     }
     if(method_name == "ENet"){
-      load("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/SimResults/ENet_real_20230103_2.Rdata")
+      #load("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/RealDataSim/SimResults/ENet_real_20230103_2.Rdata")
+      load("./SimResults/ENet_real_20230103_2.Rdata")
       BB = result[[iter_index]][[iter_index]][[1]]  
     }
     
@@ -491,13 +506,13 @@ res[[16]] = obtain_ggplot(index_list, "BNTR")[[1]] + ylim(-0.1, 0.3)
 library(ggpubr)
 library(stringi)
 library(stringr)
-png("temtem.png",units="in", width=9.52/1.3, height=11/2,res=300)
+#png("temtem.png",units="in", width=9.52/1.3, height=11/2,res=300)
 ggarrange(res[[13]] + labs(title = "TLR") + theme(plot.title=element_text(hjust=0.5,margin = margin(t = 0, r = 0, b = 2.5, l = 0, unit = "pt"))),
           res[[14]] + labs(title = "TLR-rescale")  + theme(plot.title=element_text(hjust=0.5,margin=margin(t = 0 , r = 0, b = 2.5, l = 0, unit = "pt"))),
           res[[15]] + labs(title = "ENet")+ theme(plot.title=element_text(hjust=0.5,margin=margin(t = 0, r = 0, b = 2.5, l = 0, unit = "pt"))),
           res[[16]] + labs(title = "BroadcasTR")  + theme(plot.title=element_text(hjust=0.5,margin=margin(t = 0, r = 0, b = 2.5, l = 0, unit = "pt"))),
           ncol=2, nrow=2, common.legend = TRUE, legend='right')
-dev.off()
+#dev.off()
 
 
 
