@@ -1,7 +1,7 @@
 #plot vary size
 
 
-setwd("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper")
+#setwd("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper")
 source('./ComponentsNonLin/functions_needed.R')
 source('./ComponentsNonLin/sequential_warmstart.R')
 source('./ComponentsNonLin/broadcasted_sparsetenreg.R')
@@ -21,7 +21,7 @@ library(stringr)
 ##plot for BNTR in various  sample size
 p=c(64,64)
 
-png("temtemtem.png",units="in", width=5.4, height=8,res=300)
+#png("temtemtem.png",units="in", width=5.4, height=8,res=300)
 par(mar = c(0,0,0,0),mfcol=c(5,3),mai=c(0.05,0.25,0.3,0.2))
 
 
@@ -41,7 +41,7 @@ for(n_i in 2:4){
   #method="TLR2" # linear model with rescaling
   
   #distri="tnorm"
-  distri="beta"
+  #distri="beta"
   
   n=n_all[n_i]
   n_size=str_c("n=",n)
@@ -52,8 +52,10 @@ for(n_i in 2:4){
   
   #load the data
   
-  path1 = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimResults/", method,n,"_new_K8_20230302.Rdata")
-  path2 = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimResults/ise_", method, n, "_new_K8_20230302.Rdata")
+  #path1 = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimResults/", method,n,"_new_K8_20230302.Rdata")
+  #path2 = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimResults/ise_", method, n, "_new_K8_20230302.Rdata")
+  path1 = str_c("./SimResults/", method,n,"_new_K8_20230302.Rdata")
+  path2 = str_c("./SimResults/ise_", method, n, "_new_K8_20230302.Rdata")
   
   
   load(path1)
@@ -107,5 +109,5 @@ for(n_i in 2:4){
     }
   }
 }
-dev.off()
+#dev.off()
 
