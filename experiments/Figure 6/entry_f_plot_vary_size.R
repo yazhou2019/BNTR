@@ -1,15 +1,17 @@
 
-setwd("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper")
-source("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/ComponentsNonLin/functions_needed.R")
+#setwd("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper")
 library(stringi)
 library(stringr)
-source("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimDataGeneration_He/20230224_get_ise.R")
+library(ggplot2)
 
-source("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimDataGeneration_He/20230224_get_BB.R")
+source("./ComponentsNonLin/functions_needed.R")
+source("./SimDataGeneration_He/20230224_get_ise.R")
+source("./SimDataGeneration_He/20230224_get_BB.R")
 
 obtain_median_BNTR_iter <-function(case = 1, n = 500){
   #path = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimResults/BNTR", n, "_new_K8_20230302.Rdata") 
-  path = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimResults/ise_BNTR",n,"_new_K8_20230302.Rdata")
+  #path = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimResults/ise_BNTR",n,"_new_K8_20230302.Rdata")
+  path = str_c("./SimResults/ise_BNTR",n,"_new_K8_20230302.Rdata")
   load(path)
   iter_index = order(ise_mat[,2*case-1])[26] #which(order(ise_mat[,2*case-1])==26)
   return(iter_index)
@@ -17,7 +19,8 @@ obtain_median_BNTR_iter <-function(case = 1, n = 500){
 
 
 obtain_hat_curve <- function(n=500){
-  path = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimResults/BNTR", n, "_new_K8_20230302.Rdata")
+  #path = str_c("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/SimResults/BNTR", n, "_new_K8_20230302.Rdata")
+  path = str_c("./SimResults/BNTR", n, "_new_K8_20230302.Rdata")
   load(path)
   y_hat_all_list = list()
   for(iter in 1:50){
@@ -242,13 +245,13 @@ for(size_i in 1:3){
 
 
 
-qtile=0.56
+qtile=0.57
 index_list= obtain_index_list(y_hat_ten_list[[3]], y_true_ten, n=1000, qtile=qtile)
 index_list_new = list()
 for(i in c(1,3,4)){
   index_list_new[[i]] = index_list[[i]]
 }
-load("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/plot/index_list_1000_055555.Rdata")
+
 for(i in c(2,5)){
   index_list_new[[i]] = index_list[[i]]
 }
@@ -263,41 +266,7 @@ library(ggpubr)
 library(stringi)
 library(stringr)
 save_name = str_c("tem", qtile, ".png")
-png(save_name,units="in", width=9.52, height=11,res=300)
-ggarrange(res_size[[1]][[1]]+labs(x=NULL,y=str_c("Case ", 1))+ 
-            labs(title = "n=500") + theme(plot.title=element_text(hjust=0.5,margin = margin(t = 0, r = 0, b = 0, l = 0, unit = "pt"))),
-          res_size[[2]][[1]]+ labs(title = "n=750") + theme(plot.title=element_text(hjust=0.5,margin=margin(t = 0, r = 0, b = 0, l = 0, unit = "pt"))),
-          res_size[[3]][[1]]+ labs(title = "n=1000") + theme(plot.title=element_text(hjust=0.5,margin=margin(t = 0, r = 0, b = 0, l = 0, unit = "pt"))),
-          res_size[[1]][[3]]+labs(x=NULL,y=str_c("Case ", 2)),res_size[[2]][[3]],res_size[[3]][[3]],
-          res_size[[1]][[2]]+labs(x=NULL,y=str_c("Case ", 3)),res_size[[2]][[2]],res_size[[3]][[2]],
-          res_size[[1]][[4]]+labs(x=NULL,y=str_c("Case ", 4)),res_size[[2]][[4]],res_size[[3]][[4]],
-          res_size[[1]][[5]]+labs(x=NULL,y=str_c("Case ", 5)),res_size[[2]][[5]],res_size[[3]][[5]],
-          ncol=3, nrow=5, common.legend = TRUE, legend='right')
-
-dev.off()
-
-
-
-}
-
-
-load("~/Desktop/Research/JRSSB/upload2_newserver/BNTR/FullSimPaper/plot/index_list_1000_055555.Rdata")
-res_size = list()
-y_true_ten = obtain_true_curve()
-n_size = c(500,750,1000)
-library(ggplot2)
-for(size_i in 1:3){
-  y_hat_ten = obtain_hat_curve(n=n_size[size_i])
-  #index_list = obtain_index_list(y_hat_ten, y_true_ten, n=1000)
-  #tmp_res = obtain_ggplot_BNTR(used_index_list =index_list, y_hat_ten, y_true_ten)
-  res_size[[size_i]] = obtain_ggplot_BNTR(used_index_list =index_list, y_hat_ten, y_true_ten)
-}
-
-
-library(ggpubr)
-library(stringi)
-library(stringr)
-#png("temtem.png",units="in", width=9.52, height=11,res=300)
+#png(save_name,units="in", width=9.52, height=11,res=300)
 ggarrange(res_size[[1]][[1]]+labs(x=NULL,y=str_c("Case ", 1))+ 
             labs(title = "n=500") + theme(plot.title=element_text(hjust=0.5,margin = margin(t = 0, r = 0, b = 0, l = 0, unit = "pt"))),
           res_size[[2]][[1]]+ labs(title = "n=750") + theme(plot.title=element_text(hjust=0.5,margin=margin(t = 0, r = 0, b = 0, l = 0, unit = "pt"))),
@@ -309,6 +278,13 @@ ggarrange(res_size[[1]][[1]]+labs(x=NULL,y=str_c("Case ", 1))+
           ncol=3, nrow=5, common.legend = TRUE, legend='right')
 
 #dev.off()
+
+}
+
+
+
+
+
 
 
 
