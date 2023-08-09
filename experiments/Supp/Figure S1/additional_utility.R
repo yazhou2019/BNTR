@@ -1,9 +1,9 @@
-load("~/Desktop/JRSSBreview2/upload_JRSSB_2nd_respond/B1.Rdata")
-load("~/Desktop/JRSSBreview2/upload_JRSSB_2nd_respond/B2.Rdata")
-load("~/Desktop/JRSSBreview2/upload_JRSSB_2nd_respond/B3.Rdata")
-load("~/Desktop/JRSSBreview2/upload_JRSSB_2nd_respond/B41.Rdata")
-load("~/Desktop/JRSSBreview2/upload_JRSSB_2nd_respond/B42.Rdata")
-load("~/Desktop/JRSSBreview2/upload_JRSSB_2nd_respond/butterfly.Rdata")
+load("./Template/B1.Rdata")
+load("./Template/B2.Rdata")
+load("./Template/B3.Rdata")
+load("./Template/B41.Rdata")
+load("./Template/B42.Rdata")
+load("./Template/butterfly.Rdata")
 
 CASE1 = B1
 CASE2 = B2
