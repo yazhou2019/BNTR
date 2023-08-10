@@ -144,5 +144,5 @@ for(iter in 1:50){
 }
 
 res = list(res_mat=res_mat, res_mat_app=res_mat_app)
-name = str_c("res",n_use, "_smaller_oj_test.Rdata")
+name = str_c("res",n_use, "_smaller_oj.Rdata")
 save(res, file=name)
