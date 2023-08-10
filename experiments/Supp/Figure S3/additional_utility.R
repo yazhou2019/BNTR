@@ -1,9 +1,9 @@
-load("~/Desktop/JRSSBreview2/upload_JRSSB_2nd_respond/B1.Rdata")
-load("~/Desktop/JRSSBreview2/upload_JRSSB_2nd_respond/B2.Rdata")
-load("~/Desktop/JRSSBreview2/upload_JRSSB_2nd_respond/B3.Rdata")
-load("~/Desktop/JRSSBreview2/upload_JRSSB_2nd_respond/B41.Rdata")
-load("~/Desktop/JRSSBreview2/upload_JRSSB_2nd_respond/B42.Rdata")
-load("~/Desktop/JRSSBreview2/upload_JRSSB_2nd_respond/butterfly.Rdata")
+load("./Template/B1.Rdata")
+load("./Template/B2.Rdata")
+load("./Template/B3.Rdata")
+load("./Template/B41.Rdata")
+load("./Template/B42.Rdata")
+load("./Template/butterfly.Rdata")
 
 CASE1 = B1
 CASE2 = B2
@@ -476,7 +476,7 @@ plot_fhatminusftrue_vary_sample <-function(signal_i=1, iter=1,
   res = list()
   for(i in 1:length(qseq)){
     #abstract_tensornorm[use_index_se[5]]
-    if(sum(is.na(index))==1){
+    if(sum(is.na(index)==1)){
     index = ordermap2tensor(use_index_se[i])
     }
     print("")

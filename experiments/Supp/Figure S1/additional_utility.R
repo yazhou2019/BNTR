@@ -476,7 +476,7 @@ plot_fhatminusftrue_vary_sample <-function(signal_i=1, iter=1,
   res = list()
   for(i in 1:length(qseq)){
     #abstract_tensornorm[use_index_se[5]]
-    if(is.na(index)==1){
+    if(sum(is.na(index)==1)){
     index = ordermap2tensor(use_index_se[i])
     }
     print("")

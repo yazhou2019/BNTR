@@ -5,7 +5,8 @@
 obtain_linear_BB <-function(){
   library(stringr)
   methods = c("TLR1", "TLR2", "ENet")
-  env_name = "/Users/ya/Desktop/Github/BroadcasTR/clean_code/FullSimPaper/SimResults/"
+  #env_name = "/Users/ya/Desktop/Github/BroadcasTR/clean_code/FullSimPaper/SimResults/"
+  env_name = "./SimResults/"
   sample_sizes = c(500, 750, 1000)
   sample_size_list = list()
   for(size_i in 1:3){
@@ -43,7 +44,7 @@ obtain_linear_BB <-function(){
 
 
 obtain_the_curves_values <- function(n_i=4, signal_i=5, distri="unif",qseq_used = c(0.25, 0.75),index=NA, iditer=NA){
-  setwd("~/Desktop/JRSSBreview2/upload_JRSSB_2nd_respond/NewResults")
+ # setwd("~/Desktop/JRSSBreview2/upload_JRSSB_2nd_respond/NewResults")
   library(msm)
   source('./additional_utility.R', echo=TRUE)
   
@@ -81,17 +82,31 @@ obtain_the_curves_values <- function(n_i=4, signal_i=5, distri="unif",qseq_used 
     method = "BNTR"
     if(signal_i <= 4){
       if(n <1000&n>250){
-        path1=str_c("/Users/ya/Desktop/Github/BroadcasTR/clean_code/FullSimPaper/SimResults/", method, "_", n, "_new.Rdata")
-        path2=str_c("/Users/ya/Desktop/Github/BroadcasTR/clean_code/FullSimPaper/SimResults/final_error_", method, "_", n, "_new.Rdata")
+        # path1=str_c("/Users/ya/Desktop/Github/BroadcasTR/clean_code/FullSimPaper/SimResults/", method, "_", n, "_new.Rdata")
+        # path2=str_c("/Users/ya/Desktop/Github/BroadcasTR/clean_code/FullSimPaper/SimResults/final_error_", method, "_", n, "_new.Rdata")
+        # 
+        
+        path1=str_c("./SimResults/", method, "_", n, "_new.Rdata")
+        path2=str_c("./SimResults/final_error_", method, "_", n, "_new.Rdata")
+        
         load(path1)
         load(path2)
         res_mat = t(final_error)
       }else if(n ==1000){
-        load("/Users/ya/Desktop/Github/BroadcasTR/clean_code/FullSimPaper/SimResults/BNTR1000_new_K7_2rd.Rdata")  
-        load("/Users/ya/Desktop/Github/BroadcasTR/clean_code/FullSimPaper/SimResults/res_mat1000K8.Rdata")
+        #load("/Users/ya/Desktop/Github/BroadcasTR/clean_code/FullSimPaper/SimResults/BNTR1000_new_K7_2rd.Rdata")  
+        #load("/Users/ya/Desktop/Github/BroadcasTR/clean_code/FullSimPaper/SimResults/res_mat1000K8.Rdata")
+        
+        load("./SimResults/BNTR1000_new_K7_2rd.Rdata")  
+        load("./SimResults/res_mat1000K8.Rdata")
+        
+        
       }else if(n==250){
-        load("/Users/ya/Desktop/JRSSBreview2/upload_JRSSB_2nd_respond/NewResults/SimResults/BNTR250_new_K4.Rdata")
-        load("/Users/ya/Desktop/JRSSBreview2/upload_JRSSB_2nd_respond/NewResults/MSE_ISE/res_mat250K4uniform.Rdata")
+        #load("/Users/ya/Desktop/JRSSBreview2/upload_JRSSB_2nd_respond/NewResults/SimResults/BNTR250_new_K4.Rdata")
+        #load("/Users/ya/Desktop/JRSSBreview2/upload_JRSSB_2nd_respond/NewResults/MSE_ISE/res_mat250K4uniform.Rdata")
+        load("./SimResults/BNTR250_new_K4.Rdata")
+        load("./MSE_ISE/res_mat250K4uniform.Rdata")
+        
+        
       }
     }
     if(signal_i ==5){
