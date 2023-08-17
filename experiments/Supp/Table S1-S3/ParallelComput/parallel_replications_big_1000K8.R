@@ -2,7 +2,7 @@
 
 
 library(snowfall)
-sfInit(parallel=TRUE, cpus=17, type="SOCK")
+sfInit(parallel=TRUE, cpus=25, type="SOCK")
 
 
 
@@ -49,7 +49,7 @@ wrapper <- function(idx) {
     id_vali=(1000-n_vali+1):1000
     id_test=851:1000 # test is useless here
     
-    res=validation_broadcasted_sparsetenreg(R,alpha,lambda,X_data[,,id_train],y_all[[signal_i]][id_train],X_data[,,id_vali],y_all[[signal_i]][id_vali],X_data[,,id_test],y_all[[signal_i]][id_test])
+    res=validation_broadcasted_sparsetenreg(R,alpha,lambda,X_data[,,id_train],y_all[[signal_i]][id_train],X_data[,,id_vali],y_all[[signal_i]][id_vali],X_data[,,id_test],y_all[[signal_i]][id_test],num_knots=7)
     BB_idx[[signal_i]]=res$BB
     BB_idx[[signal_i+4]]=res$bb
     BB_idx[[signal_i+8]]=res$MSE_pre
@@ -57,7 +57,7 @@ wrapper <- function(idx) {
   return(BB_idx)
 }
 
-sfSource('./ParallelComput/parallel_source_500.R')
+sfSource('./ParallelComput/parallel_source_1000.R')
 
 sfClusterSetupRNG()
 
@@ -65,7 +65,7 @@ result <- sfLapply(1:50, wrapper)
 
 
 sfStop()
-filename <- str_c("BNTR", n_use, "_new.Rdata")
+filename <- str_c("BNTR", n_use, "_new_K8.Rdata")
 setwd("./SimResults")
 save(result,file = filename)
 setwd("../")
