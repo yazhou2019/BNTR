@@ -1,9 +1,9 @@
 #library(BNTR)
 
 
-source('./SimDataGeneration_new/20221018_get_inputs.R')
-source('./SimDataGeneration_new/20221018_get_BB.R')
-source('./SimDataGeneration_new/20221018_get_function.R')
+source('./SimDataGeneration_He/20230224_get_inputs.R')
+source('./SimDataGeneration_He/20230224_get_BB.R')
+source('./SimDataGeneration_He/20230224_get_function.R')
 
 
 
@@ -100,106 +100,40 @@ fhat_ten_int_linear <- function(BB){
 ################### f hat part##################
 
 
-
+## BB[[i]] = BBprod[[i]][1,,]
 ftrue_ten <- function(X, case, BBv){
-  
-  # the dimension is from dim(X)
-  #res = get_BB(case=case, plotshow=FALSE)
-  res = BBv
-  p = dim(X)[1:2]
+  BBvv=list()
+  for(i in 1:9){
+    BBvv[[i]] = BBv[[i]][1,,]
+  }
+  BBv = BBvv
   
   if(case==1){
-    a = res$a
-    b = res$b
-    BB = 0
-    for(i in 1:4){
-      BB = BB + a[[i]]%*%b[[i]]
-    }
-    if(length(p)==2 && sum(p==c(64,64))!=2){
-      BB = resize_array(BB, p)
-    }
-    res = X * BB
-    
-    
-  }else if(case==2){
-    a = res$a
-    b = res$b
-    BB = 0
-    for(i in 1:2){
-      BB = BB + a[[i]]%*%b[[i]]
-    }
-    
-    if(length(p)==2 && sum(p==c(64,64))!=2){
-      BB = resize_array(BB, p)
-    }
-    res = falls[[1]](X) * BB
-    
-    
-    
-  }else if(case==3){
-    a = res$a
-    b = res$b
-    BB = list()
-    for(i in 1:4){
-      BB[[i]] = 0
-    }
-    for(i in 1:2){
-      BB[[1]] = BB[[1]] + a[[i]]%*%b[[i]]
-    }
-    for(i in 3:4){
-      BB[[2]] = BB[[2]] + a[[i]]%*%b[[i]]
-    }
-    for(i in 5:6){
-      BB[[3]] = BB[[3]] + a[[i]]%*%b[[i]]
-    }
-    BB[[4]] = a[[7]]%*%b[[7]]
-    
-    
-    res = 0 
-    for(i in 1:4){
-      if(length(p)==2 && sum(p==c(64,64))!=2){
-        BB[[i]] = resize_array(BB[[i]], p)
-      }
-      res = res + falls[[i]](X) * BB[[i]]
-    }
-    
-    
-    
-  }else if(case==4){
-    a = res$a
-    b = res$b
-    BB = list()
-    for(i in 1:5){
-      BB[[i]] = 0
-    }
-    for(i in 1:2){
-      BB[[1]] = BB[[1]] + a[[i]]%*%b[[i]]
-    }
-    BB[[2]] = a[[3]]%*%b[[3]]
-    BB[[3]] = a[[4]]%*%b[[4]]
-    BB[[4]] = a[[5]]%*%b[[5]]
-    BB[[5]] = a[[6]]%*%b[[6]]
-    
-    
-    res = 0 
-    for(i in 1:5){
-      
-      if(length(p)==2 && sum(p==c(64,64))!=2){
-        BB[[i]] = resize_array(BB[[i]], p)
-      }
-      res = res + falls[[i]](X) * BB[[i]]
-    }
-    
-    
-    
-  }else if(case==5){
-    BB=res
-    if(length(p)==2 && sum(p==c(64,64))!=2){
-      BB = resize_array(BB, p)
-    }
-    res = falls[[1]](X) * BB
-    
+    res = BBv[[1]] * X
   }
+  if(case==2){
+    res = BBv[[2]] * f2(X) + BBv[[8]] * f4(X) + BBv[[9]] * f5(X)
+  }
+  if(case==3){
+    res = BBv[[3]] * f1(X) + BBv[[4]] * f1(X) 
+  }
+  if(case==4){
+    res = BBv[[5]] * f1(X) + BBv[[6]] * f3(X)
+    #res = BBv[[7]] * f1(X)
+  }
+  if(case==5){
+   # res = BBv[[7]] * f2(X)
+    res = BBv[[7]] * f3(X)
+  }
+  
+  
+  # # for reference
+  # y_all[[1]]=v[[1]]+t(ctprod(BBprod[[1]],X_data,2))
+  # y_all[[2]]=v[[2]]+t(ctprod(BBprod[[2]],f1(X_data),2))+t(ctprod(BBprod[[8]],f2(X_data),2))+t(ctprod(BBprod[[9]],f5(X_data),2))
+  # y_all[[3]]=v[[3]]+t(ctprod(BBprod[[3]],f2(X_data),2))+t(ctprod(BBprod[[4]],f2(X_data),2))
+  # y_all[[4]]=v[[4]]+t(ctprod(BBprod[[5]],f3(X_data),2))+t(ctprod(BBprod[[6]],f5(X_data),2))
+  # y_all[[5]]=v[[5]]+t(ctprod(BBprod[[7]],f4(X_data),2))
+  # the dimension is from dim(X)
   
   return(res)
 }
