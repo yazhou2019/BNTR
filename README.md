@@ -133,6 +133,7 @@ The code for the analyses presented in the paper is located in the "./experiment
 - "./experiments/Figure 6": The plot of the true and estimated entry-wise functions using BroadcasTR. From the first row to the fifth row correspond to Cases 1–5, respectively. From left to right are respectively the sample sizes n = 500, 750, and 1000. (X is generated from a mixture of multivariate truncated normal distribution with a Toeplitz variance matrix on the support and point mass distribution on the boundaries.)
 - "./experiments/Figure 7": The estimation performance of entry-wise functions for the simulated monkey’s electrocorticography data. Each panel is the result of one comparing method. The entry is chosen to be the one with the median ISE (of BroadcasTR) among all entires, in the replicate with the median performance among 10 replicates of random splitting.
  </details>
+ 
 ### The supplementary (The previous)
 <details>
   <summary>Click to view collapsible paragraph：The supplementary (The previous)</summary>
