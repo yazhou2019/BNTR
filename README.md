@@ -159,9 +159,13 @@ The code for the analyses presented in the paper is located in the "./experiment
 ## Version 4 (The latest)
 ### The main paper (The latest)
 - Table 1 in the main paper："./experiments/Table_1_new". Table 1. Estimation performance in synthetic data. Reported are the averages of ISEs and the corresponding standard (in parentheses) based on 50 data replicates. In the first column, n is the total sample size.
+
 - Table 2 in the main paper: "./experiments/Table 2". Table 2. Prediction performance on monkey’s electrocorticography data. Reported are averages of MSPE and the coing standard deviations (in parentheses) based on 10 random splits.
+
 - Table 3 in the main paper: "./experiments/Table 3". Table 3. Prediction performance on the simulated monkey’s electrocorticography data in Section 5.3. Reported are averages of MSPE and the corresponding standard deviations (in parentheses) based on 10 random splits.
+
 - Fig. 4 in the main paper: "./experiments/Figure_4_new". Fig. 4. Region selection of various methods for n = 1000. The first column presents the true norm tensors corresponding to Cases 1–5, respectively. The remaining four columns depict the estimated norm tensor with median ISEs of the comparative and proposed methods. Columns from left to right respectively correspond to TLR, TLR-rescaled, ENetR, and BroadcasTR. The plots in all columns share the same color scheme as shown in the color bar at the bottom.
+  
 ### The supplementary (The latest)
 <details>
   <summary>Click to view collapsible paragraph：The supplementary (The previous)</summary>
