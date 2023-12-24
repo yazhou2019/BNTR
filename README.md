@@ -119,8 +119,15 @@ The new simulation data is located in "./experiments/new_simulation".
 The algorithm can be implemented as Example 2.
 
 # Experiments 
-
-
+The codes of the paper can be found in "./experiments". To be more specific, 
+- "./experiments/Table 1":  Estimation performance in synthetic data. Reported are the averages of ISEs and the corresponding standard deviations (in parentheses) based on 50 data replications. In the first column, n is the total sample size, of which 20% were kept for the hold-out method. (X is generated from a mixture of multivariate truncated normal distribution with a Toeplitz variance matrix on the support and point mass distribution on the boundaries.)
+- "./experiments/Table 2": Prediction performance on the monkey’s electrocorticography data. Reported are averages of MSPE and the corresponding standard deviations (in parentheses) based on 10 random splittings.
+- "./experiments/Table 3": Prediction performance on the simulated monkey’s electrocorticography data. Reported are averages of MSPE and the corresponding standard deviations (in parentheses) based on 10 random splittings.
+- "./experiments/Figure 4": Region selection of TLR, TLR-rescaled, ENetR, and BroadcasTR for n = 1000, of which 20% were for the hold-out method. The first column presents the true norm tensors corresponding to Cases 1–5, respectively. The rest four columns depict the estimated norm tensor with median ISEs of the comparative and proposed methods. Columns from left to right respectively correspond to TLR, TLR-rescaled, ENetR, and BroadcasTR. The plots in all columns share the same color scheme as shown in the color bar at the bottom. (X is generated from a mixture of multivariate truncated normal distribution with a Toeplitz variance matrix on the support and point mass distribution on the boundaries.)
+- "./experiments/Figure 5": Region selection of BroadcasTR for Cases 1–5, with various sample size n = 500, 750, and 1000 (where 20% data are used for the hold-out method). All plots share the same color scheme as shown in the color bar at the bottom.(X is generated from a mixture of multivariate truncated normal distribution with a Toeplitz variance matrix on the support and point mass distribution on the boundaries.)
+- "./experiments/Figure 6": The plot of the true and estimated entry-wise functions using BroadcasTR. From the first row to the fifth row correspond to Cases 1–5, respectively. From left to right are respectively the sample sizes n = 500, 750, and 1000. (X is generated from a mixture of multivariate truncated normal distribution with a Toeplitz variance matrix on the support and point mass distribution on the boundaries.)
+- "./experiments/Figure 7": Fig. 7. The estimation performance of entry-wise functions for the simulated monkey’s electrocorticography data. Each panel is the result of one comparing method. The entry is chosen to be the one with the median ISE (of BroadcasTR) among all entires, in the replicate with the median performance among 10 replicates of random splitting.
+  
 
 # References
 Zhou, Y., Wong, R. K. W., & He, K. (2020). Broadcasted nonparametric tensor regression. arXiv preprint arXiv:2008.12927. [\[link\]](https://arxiv.org/abs/2008.12927v2)
