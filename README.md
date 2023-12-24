@@ -166,7 +166,7 @@ The code for the analyses presented in the paper is located in the "./experiment
 ### The main paper (The latest)
 - Table 1 in the main paper："./experiments/Table_1_new". Table 1. Estimation performance in synthetic data. Reported are the averages of ISEs and the corresponding standard (in parentheses) based on 50 data replicates. In the first column, n is the total sample size.
 
-- Table 2 in the main paper: "./experiments/Table 2". Table 2. Prediction performance on monkey’s electrocorticography data. Reported are averages of MSPE and the coing standard deviations (in parentheses) based on 10 random splits.
+- Table 2 in the main paper: "./experiments/Table 2". Table 2. Prediction performance on monkey’s electrocorticography data. Reported are averages of MSPE and the coing standard deviations (in parentheses) based on 10 random splits. The real data is preprocessed by the file in "./experiments/Table 2/ECOG_observation". 
 
 - Table 3 in the main paper: "./experiments/Table 3". Table 3. Prediction performance on the simulated monkey’s electrocorticography data in Section 5.3. Reported are averages of MSPE and the corresponding standard deviations (in parentheses) based on 10 random splits.
 
