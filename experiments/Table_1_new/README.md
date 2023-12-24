@@ -17,7 +17,7 @@
 - step 1: use Data_generation_to_MATLAB_new.R to transform the generated Rdata to .mat format.
 - step 2: run (TLR_repeat_1000_grid.m, TLR_repeat_750_grid.m, TLR_repeat_500_grid.m) in MATLAB to obtain the fitting results.
 - step 3: use mat2Rdata.R to transform the fitting results to .Rdata format.
-- step 4: use parallel_get_ise_TLR1.R to obtaint the ISE.
+- step 4: use parallel_get_ise_TLR1.R to obtain the ISE.
 
 
 
