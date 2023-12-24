@@ -168,7 +168,7 @@ The code for the analyses presented in the paper is located in the "./experiment
   
 ### The supplementary (The latest)
 <details>
-  <summary>Click to view collapsible paragraph：The supplementary (The previous)</summary>
+  <summary>Click to view collapsible paragraph：The supplementary (The latest)</summary>
  
 - Fig. S.1. in the supplementary: "./experiments/Figure_5_new". Fig. S.1. Region selection of BroadcasTR for the synthetic data in Section 5.1 of the main, with sample sizes n = 500, 750, and 1000. All plots share the same color scheme as shown in the color bar at the bottom.
 
