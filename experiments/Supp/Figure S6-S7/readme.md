@@ -1,5 +1,6 @@
-The data preprocessing 
+The ADNI data is preprocessed by the following steps. 
 - Step 1: run read_data_1.R
 - Step 2: run read_data_2.R
+
   
-Then, you will obtain the data which can be used by BroadcasTR and TLR-rescaled. 
+Then, you will obtain the data that can be used by BroadcasTR and TLR-rescaled. 
