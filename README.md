@@ -120,7 +120,7 @@ The algorithm can be implemented as Example 2.
 
 # Experiments in the paper
 ## Version 3
-The code for the analyses presented in the paper can be found in the "./experiments" directory. Specifically, 
+The code for the analyses presented in the paper can be found in the "./experiments" directory.  
 - "./experiments/Table 1":  Estimation performance in synthetic data. Reported are the averages of ISEs and the corresponding standard deviations (in parentheses) based on 50 data replications. In the first column, n is the total sample size, of which 20% were kept for the hold-out method. (X is generated from a mixture of multivariate truncated normal distribution with a Toeplitz variance matrix on the support and point mass distribution on the boundaries.)
 - "./experiments/Table 2": Prediction performance on the monkey’s electrocorticography data. Reported are averages of MSPE and the corresponding standard deviations (in parentheses) based on 10 random splittings.
 - "./experiments/Table 3": Prediction performance on the simulated monkey’s electrocorticography data. Reported are averages of MSPE and the corresponding standard deviations (in parentheses) based on 10 random splittings.
