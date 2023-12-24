@@ -183,7 +183,8 @@ The code for the analyses presented in the paper is located in the "./experiment
 - Fig. S.7. in the supplementary: "./experiments/Supp/Figure S5". Fig. S.7. The LHS (LHSloss) and RHS (RHSobj) of (B.11) in Case 2 of the synthetic data in Section 5.1 of the main paper. The first row show these two quantities based on 50 replications after vali- dation, when n = 500 and n = 1000. The second row depicts the differences (RHSobj - LHSloss) accordingly.
 
 - Fig. S.8. and Fig. S.9. in the supplementary: "./experiments/Supp/Figure S6-S7". (1)Fig. S.8. Prediction performance on the ADNI data. The left and right boxplots are respectively the classification accuracy of BroadcasTR and TLR-rescaled based on 10 random splittings. (2) Fig. S.9. Region selection performance on the ADNI data. The columns correspond to the slices of the tensor covariate. The rows named “Pos-” and “Neg-” are the plots of positive and negative contributions of each entry, respectively. The rows named “-TLR” and “-BroadcasTR” correspond to the tensor linear regression with rescaling strategy and the proposed broadcasted nonparametric model, respectively.
-<details>
+ </details>
+ 
 
 # References
 Zhou, Y., Wong, R. K. W., & He, K. (2020). Broadcasted nonparametric tensor regression. arXiv preprint arXiv:2008.12927. [\[link\]](https://arxiv.org/abs/2008.12927v2)
