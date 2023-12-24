@@ -10,7 +10,8 @@ install.packages("devtools")
 devtools::install_github("yazhou2019/BNTR/BNTR")
 ```
 
-# Example 1: for a 32-by-32 input
+# Examples 
+## Example 1: for a 32-by-32 input
 The following is a simple example for the 32-by-32 input. It can be implemented after the package BNTR is installed.
 
 ```markdown
@@ -98,7 +99,7 @@ cat("The prediction performance in these tunning parameters: \n", "MSPE =", sum(
 
 ```
 
-# Example 2: for simulations in the paper 
+## Example 2: for simulations in the paper 
 If you have already installed R package snow (for the parallel computing) and the dependences of BNTR in a linux server with multiple CPUs, you can reproduce the simulation in the following steps. 
 - Step 1. download all the codes in the repository
 - Step 2. set the tuning parameters in "./experiments/example/ParallelComput/parallel_source.R"
@@ -110,14 +111,14 @@ nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 &
 ```
 - Step 6. obtain the results in "./experiments/example/SimResults"  when Step 5 is done
 
-# Example 3: for new simulations in the paper
+## Example 3: for new simulations in the paper
 The new simulation data is located in "./experiments/new_simulation".
 - Fully synthetic data: "./experiments/new_simulation/FullSimPaper"
 - Simulated monkey’s electrocorticography data: "./experiments/new_simulation/RealDataSim"
 
 The algorithm can be implemented as Example 2.
 
-
+# Experiments 
 
 
 
