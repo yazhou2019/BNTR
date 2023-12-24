@@ -125,6 +125,7 @@ The code for the analyses presented in the paper is located in the "./experiment
 ### The main paper (The previous)
 <details>
   <summary>Click to view collapsible paragraph：The main paper (The previous)</summary>
+ 
 - "./experiments/Table 1":  Estimation performance in synthetic data. Reported are the averages of ISEs and the corresponding standard deviations (in parentheses) based on 50 data replications. In the first column, n is the total sample size, of which 20% were kept for the hold-out method. (X is generated from a mixture of multivariate truncated normal distribution with a Toeplitz variance matrix on the support and point mass distribution on the boundaries.)
  
 - "./experiments/Table 2": Prediction performance on the monkey’s electrocorticography data. Reported are averages of MSPE and the corresponding standard deviations (in parentheses) based on 10 random splittings.
@@ -143,6 +144,7 @@ The code for the analyses presented in the paper is located in the "./experiment
 ### The supplementary (The previous)
 <details>
   <summary>Click to view collapsible paragraph：The supplementary (The previous)</summary>
+ 
 - "./experiments/Supp/Figure S1-S3": (1)Region selection of TLR, TLR-rescaled, ENetR, and BroadcasTR for synthetic data in Section E with n = 1000, of which 20% were for the hold-out method. The first column presents the true norm tensors corresponding to Cases 1–5, respectively. The rest four columns de- pict the estimated norm tensor with median ISEs of the comparative and proposed methods. Columns from left to right respectively correspond to TLR, TLR-rescaled, ENetR, and BroadcasTR. The plots in all columns share the same color scheme as shown in the color bar at the bottom. (2)Region selection of BroadcasTR for Cases 1–5 (from the first to the fifth row) in Section E, with various sample size n = 500, 750, and 1000 (where 20% data are used for the hold-out method). All plots share the same color scheme as shown in the color bar at the bottom. (3)The plot of the true and estimated entry-wise functions using BroadcasTR for synthetic data in Section E. From the first row to the fifth row correspond to Cases 1–5, respectively. From left to right are respectively the sample sizes n = 500, 750, and 1000. (The tensor covariate X and the error εj were generated such that Xi1,i2 ∼ Uniform[0,1])
 
 - "./experiments/Supp/Figure S4": Estimated tensor norms of BroadcasTR for Cases 1–5 (from the first to the fifth row) in Section F where the entries of tensor covariate are Beta(2, 2) distributed. From left to right correspond to sample sizes n = 500, 750, 1000 (of which 20% data are used for the hold-out method). All plots share the same color scheme as shown in the color bar at the bottom.
