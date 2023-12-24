@@ -119,8 +119,9 @@ The new simulation data is located in "./experiments/new_simulation".
 The algorithm can be implemented as Example 2.
 
 # Experiments in the paper
+The code for the analyses presented in the paper is located in the "./experiments" directory. For the latest version, please refer to the 'Version 4' section.
+
 ## Version 3 (The previous)
-The code for the analyses presented in the paper can be found in the "./experiments" directory. 
 ### The main paper (The previous)
 - "./experiments/Table 1":  Estimation performance in synthetic data. Reported are the averages of ISEs and the corresponding standard deviations (in parentheses) based on 50 data replications. In the first column, n is the total sample size, of which 20% were kept for the hold-out method. (X is generated from a mixture of multivariate truncated normal distribution with a Toeplitz variance matrix on the support and point mass distribution on the boundaries.)
 - "./experiments/Table 2": Prediction performance on the monkey’s electrocorticography data. Reported are averages of MSPE and the corresponding standard deviations (in parentheses) based on 10 random splittings.
