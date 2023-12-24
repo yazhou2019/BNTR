@@ -111,12 +111,17 @@ nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 &
 ```
 - Step 6. obtain the results in "./experiments/example/SimResults"  when Step 5 is done
 
+If you want to see the code for the analyses presented in the paper, please refer to the 'Experiments in the paper' section. 
+
+
 ## Example 3: for new simulations in the paper
 The new simulation data is located in "./experiments/new_simulation".
 - Fully synthetic data: "./experiments/new_simulation/FullSimPaper"
 - Simulated monkey’s electrocorticography data: "./experiments/new_simulation/RealDataSim"
-
+  
 The algorithm can be implemented as Example 2.
+
+If you want to see the code for the analyses presented in the paper, please refer to the 'Experiments in the paper' section. 
 
 # Experiments in the paper
 The code for the analyses presented in the paper is located in the "./experiments" directory. For the latest version, please refer to the 'Version 4' section.
