@@ -3,4 +3,4 @@
 
 
 # Region selection of BroadcasTR for Cases 1–5, with various sample size n = 500, 750, and 1000 
-- Run 20230224_plot_vary.R, you will get the plot results;
+- Run 20230918_plot_vary.R, you will get the plot results;
