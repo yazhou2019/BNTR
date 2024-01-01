@@ -168,7 +168,7 @@ The code for the analyses presented in the paper is located in the "./experiment
 
 - Table 2 in the main paper: "./experiments/Table 2". Table 2. Prediction performance on monkey’s electrocorticography data. Reported are averages of MSPE and the coing standard deviations (in parentheses) based on 10 random splits. (The monkey’s electrocorticography data is preprocessed by the file in "./experiments/Table 2/ECOG_observation". )
 
-- Table 3 in the main paper: "./experiments/Table 3". Table 3. Prediction performance on the simulated monkey electrocorticography data in Section 5.3. Reported are averages of MSPE and the corresponding standard deviations (in parentheses) based on 10 random splits.
+- Table 3 in the main paper: "./experiments/Table 3". Table 3. Prediction performance for the simulated monkey electrocorticography data. Reported are the averages of MSPE and the corresponding standard deviations (in parentheses) based on 10 random splits.
 
 - Fig. 4 in the main paper: "./experiments/Figure_4_new". Fig. 4. Region selection of the competing methods for n = 1000. The first column presents the true norm tensors in Cases 1–5. The remaining four columns display the estimated norm tensors corresponding to the replicate of the upper median ISE performance for the competing methods. The columns from left to right correspond to TLR, TLR-rescaled, ENetR, and BroadcasTR, respectively. The plots in all columns share the same color scheme as shown in the color bar at the bottom.
   
