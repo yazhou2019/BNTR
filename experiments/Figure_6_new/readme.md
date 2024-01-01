@@ -3,7 +3,7 @@
 
 
 # The plot of the true and estimated entry-wise functions using BroadcasTR.  
-- Run entry_f_plot_vary_size.R, you will get the plot results;
+- Run entry_f_plot_vary_size.R, you will get the plot results; the dependence can be founded in "/experiments/Table_1_new". 
 
 
 
