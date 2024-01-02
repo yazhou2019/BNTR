@@ -5,10 +5,10 @@
 
 
 # BroadcasTR
-- Remark: you need to set "./BroadcasTR" as the working directory.
+- Remark0: you need to set "./BroadcasTR" as the working directory.
 - See the file BroadcasTR. You can run SimNonLin.R and ISE_SimNonLin.R to obtain the fitting results and ISE, respectively. After you finish the codes, you will get "BNTR_500_20230918.Rdata", "BNTR_750_20230918.Rdata", "BNTR_1000_20230918.Rdata", "ise_BNTR_500_20230918.Rdata", "ise_BNTR_750_20230918.Rdata", and "ise_BNTR_1000_20230918.Rdata" in "./BroadcasTR/SimResults".
 
-Remark1: you can chose the sample size (n=500, 750 or 1000) for SimNonLin.R by directly replace the code in SimNonLin.R. See below.
+Remark1: you can chose the sample size (n=500, 750 or 1000) for SimNonLin.R by directly replacing the code in SimNonLin.R. See below.
 ```
 # The following is SimNonLin.R 
 source('./ParallelComput/parallel_replications_big_1000K8_new.R') # when you want to run the experiment where the sample size n=1000 
@@ -17,16 +17,12 @@ source('./ParallelComput/parallel_replications_big_1000K8_new.R') # when you wan
 
 #source('./ParallelComput/parallel_replications_big_500K6_new.R') # when you want to run the experiment where the sample size n=500
 ```
-Remark2: you can chose the sample size (n=500, 750 or 1000) for ISE_SimNonLin.R by replace the code in parallel_get_ise.R. See below. 
+Remark2: you can chose the sample size (n=500, 750 or 1000) for ISE_SimNonLin.R by replacing the code in parallel_get_ise.R. See below. 
 ```
 # The following is a part of ./BroadcasTR/ParallelComput/parallel_get_ise.R
 
 #####
-sfSource('./ParallelComput/parallel_source_500.R') #when you want to run the experiment where the sample size n=500
-
-# sfSource('./ParallelComput/parallel_source_750.R') #when you want to run the experiment where the sample size n=750
-
-# sfSource('./ParallelComput/parallel_source_1000.R') #when you want to run the experiment where the sample size n=1000
+sfSource('./ParallelComput/parallel_source_500.R') #when you want to run the experiment where the sample size n=500. If you want to run the experiments for the sample size n=750 or n=1000, you can relace it by sfSource('./ParallelComput/parallel_source_750.R') or sfSource('./ParallelComput/parallel_source_1000.R').
 #####
 ```
 
@@ -43,12 +39,20 @@ alpha=c(0,0.5,1)
 
 # The grids of lambda_1
 lambda=c(0.01,0.05,0.1,0.5,1,5,10,50,100,500,1000)
-
-
 ```
 
 # TLR-rescaled
-- See the file TLR-rescaled. You can run SimLin.R and ISE_SimLin.R to obtain the fitting results and ISE, respectively.
+- Remark0: you need to set "./TLR-rescaled" as the working directory.
+- See the file TLR-rescaled. You can run SimLin.R and ISE_SimLin.R to obtain the fitting results and ISE, respectively. After you finish the codes, you will get "TLR2_500_20230918.Rdata", "TLR2_750_20230918.Rdata", "TLR2_1000_20230918.Rdata", "ise_TLR2_500_20230918.Rdata", "ise_TLR2_750_20230918.Rdata", and "ise_TLR2_1000_20230918.Rdata" in "./BroadcasTR/SimResults".
+
+Remark1: you can chose the sample size (n=500, 750 or 1000) for SimLin.R by replacing the code in parallel_source_linear.R. See below.
+```
+### the floowing is a part of TLR-rescaled/ParallelComput/parallel_source_linear.R
+
+n_use=1000 # when you want to run the experiment where the sample size n=1000. If you want to run the experiments fot the sample size n=500 or n=750, you can relace it by n_use = 500 or n_use = 750.
+```
+Remark2: 
+
 
 # ENetR
 - See the file ENetR. You can run SimENetR.R and ISE_SimENetR.R to obtain the fitting results and ISE, respectively.
