@@ -116,6 +116,7 @@ nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 & # compute the ISE
 ```
 <details>
   <summary>Click to view collapsible paragraph---other methods </summary>
+  
 ### For TLR-rescaled 
 - Step 1. Put the generated synthetic data in ./experiments/Table_1_new/TLR-rescaled/SimResults
 - Step 2. set ./experiments/Table_1_new/TLR-rescaled as the working directory.
@@ -124,6 +125,7 @@ nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 & # compute the ISE
 nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 &
 nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 &
 ```
+
 ### For ENetR: 
 - Step 1. Put the generated synthetic data in ./experiments/Table_1_new/ENetR /SimResults
 - Step 2. set ./experiments/Table_1_new/ENetR as the working directory.
@@ -132,6 +134,7 @@ nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 &
 nohup  Rscript --vanilla "SimENetR.R" > ./logs 2>&1 &
 nohup  Rscript --vanilla "ISE_SimENetR.R" > ./ISE_logs 2>&1 &
 ```
+
 ### For TLR: 
 - Step 1. go to ./experiments/Table_1_new/README.md and run the steps for TLR.
  </details>
