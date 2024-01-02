@@ -43,7 +43,7 @@ lambda=c(0.01,0.05,0.1,0.5,1,5,10,50,100,500,1000)
 
 # TLR-rescaled
 - Remark0: you need to set "./TLR-rescaled" as the working directory.
-- See the file TLR-rescaled. You can run SimLin.R and ISE_SimLin.R to obtain the fitting results and ISE, respectively. After you finish the codes, you will get "TLR2_500_20230918.Rdata", "TLR2_750_20230918.Rdata", "TLR2_1000_20230918.Rdata", "ise_TLR2_500_20230918.Rdata", "ise_TLR2_750_20230918.Rdata", and "ise_TLR2_1000_20230918.Rdata" in "./BroadcasTR/SimResults".
+- See the file TLR-rescaled. You can run SimLin.R and ISE_SimLin.R to obtain the fitting results and ISE, respectively. After you finish the codes, you will get "TLR2_500_20230918.Rdata", "TLR2_750_20230918.Rdata", "TLR2_1000_20230918.Rdata", "ise_TLR2_500_20230918.Rdata", "ise_TLR2_750_20230918.Rdata", and "ise_TLR2_1000_20230918.Rdata" in "./TLR-rescaled/SimResults". Note that you need to run "mkdir SimResults" before running SimLin.R and ISE_SimLin.R in this directory. 
 
 - Remark1: you can chose the sample size (n=500, 750 or 1000) for SimLin.R and ISE_SimLin.R by replacing the code in parallel_source_linear.R. See below.
 ```
@@ -54,7 +54,10 @@ n_use=1000 # when you want to run the experiment where the sample size n=1000. I
 
 
 # ENetR
-- See the file ENetR. You can run SimENetR.R and ISE_SimENetR.R to obtain the fitting results and ISE, respectively.
+- Remark0: you need to set "./ENetR" as the working directory.
+- See the file ENetR. You can run SimENetR.R and ISE_SimENetR.R to obtain the fitting results and ISE, respectively. After you finish the codes, you will get "ENet_500_20230918.Rdata", "ENet_750_20230918.Rdata", "ENet_1000_20230918.Rdata", "ise_ENet_500_20230918.Rdata", "ise_ENet_750_20230918.Rdata", and "ise_ENet_1000_20230918.Rdata" in "./ENetR/SimResults". Note that you need to run "mkdir SimResults" before running SimENetR.R and ISE_SimENetR.R in this directory.
+
+- Remark1: 
 
 # TLR1 (The code depends on the MATLAB code in https://hua-zhou.github.io/TensorReg/)
 - step 1: use Data_generation_to_MATLAB_new.R to transform the generated Rdata to .mat format.
