@@ -103,7 +103,7 @@ cat("The prediction performance in these tunning parameters: \n", "MSPE =", sum(
 
 ## Table 1 Experiments in Section 5 of the main paper
 If you have already installed R package snow (for the parallel computing) and the dependences of BNTR in a linux server with multiple CPUs, you can reproduce the results of Table 1 in the following steps. 
-### For BroadcasTR
+### For BroadcasTR:
 - Step 1. set ./experiments/Table_1_new/BrodcasTR as the working directory. 
 - Step 2. run the following code to generate the synthetic data. 
 ```markdown
@@ -124,7 +124,7 @@ nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 & # ISE computation
 nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 &
 nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 &
 ```
-### For ENetR
+### For ENetR: 
 - Step 1. Put the generated synthetic data in ./experiments/Table_1_new/ENetR /SimResults
 - Step 2. set ./experiments/Table_1_new/ENetR as the working directory.
 - Step 3. run the following code in the the command line
@@ -132,7 +132,7 @@ nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 &
 nohup  Rscript --vanilla "SimENetR.R" > ./logs 2>&1 &
 nohup  Rscript --vanilla "ISE_SimENetR.R" > ./ISE_logs 2>&1 &
 ```
-### For TLR
+### For TLR: 
 - Step 1. go to ./experiments/Table_1_new/README.md and run the steps for TLR.
  </details>
 
