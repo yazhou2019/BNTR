@@ -12,3 +12,5 @@ Then, you will obtain the data that can be used by BroadcasTR and TLR-rescaled.
 - BroadcasTR: RealNonLinear_ADNI.R
 - TLR-rescaled: RealLinear_ADNI.R
 
+# The important region
+- boxplot.R
