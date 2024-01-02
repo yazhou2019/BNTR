@@ -1,6 +1,6 @@
-The code for the analyses presented in the paper is located in the "./experiments" directory.
+In summary, all the code can be found in ./experiments, in which each subdirectory corresponds to figures or tables in the paper).
 
-There are a number of folders for figures and tables, please refer to the readme file in the previous level of the directory. For more implementation details, go to the corresponding folder for figures and tables and refer to the readme file. For example, you can go to Table_1_new and you will see a readme file where you can see more implementation details. 
+There are a number of folders for figures and tables, please refer to the readme file in the previous level of the directory. For more implementation details, go to the corresponding folder for figures and tables and read the readme file. For example, you can go to Table_1_new and you will see a readme file where you can see more implementation details. 
 
 (Example) The following is the readme file of Table_1_new: 
 <details>
