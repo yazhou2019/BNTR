@@ -51,7 +51,6 @@ lambda=c(0.01,0.05,0.1,0.5,1,5,10,50,100,500,1000)
 
 n_use=1000 # when you want to run the experiment where the sample size n=1000. If you want to run the experiments fot the sample size n=500 or n=750, you can relace it by n_use = 500 or n_use = 750.
 ```
-- Remark2: 
 
 
 # ENetR
