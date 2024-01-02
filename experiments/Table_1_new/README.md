@@ -6,7 +6,16 @@
 
 # BroadcasTR
 - Remark: you need to set "./BroadcasTR" as the working directory.
-- See the file BroadcasTR. You can run SimNonLin.R and ISE_SimNonLin.R to obtain the fitting results and ISE, respectively.
+- See the file BroadcasTR. You can run SimNonLin.R and ISE_SimNonLin.R to obtain the fitting results and ISE, respectively. After you finish the codes, you will get "BNTR_500_20230918.Rdata", "BNTR_750_20230918.Rdata", "BNTR_1000_20230918.Rdata", "ise_BNTR_500_20230918.Rdata", "ise_BNTR_750_20230918.Rdata", and "ise_BNTR_1000_20230918.Rdata" in "./BroadcasTR/SimResults". Note that you can chose which sample size to run in SimNonLin.R. See below.
+  ```
+  
+source('./ParallelComput/parallel_replications_big_1000K8_new.R') # when you want to run the situation where the sample size n=1000 
+
+#source('./ParallelComput/parallel_replications_big_750K7_new.R') # when you want to run the situation where the sample size n=750
+
+#source('./ParallelComput/parallel_replications_big_500K6_new.R') # when you want to run the situation where the sample size n=500
+  ```
+
 - The tuning parameters can be set in "./BroadcasTR/ParallelComput/parallel_source_1000.R" (for the sample size n=1000), "./BroadcasTR/ParallelComput/parallel_source_750.R" (for the sample size n=750), or "./BroadcasTR/ParallelComput/parallel_source_500.R" (for the sample size n=500). To be more specific, you can set the grids of tuning parameters in the file. 
 ```
 # The following is a part of parallel_source_750.R
