@@ -1,5 +1,18 @@
 # Data
 - The real data is preprocessed by the file in ./ECOG_observation.
+  
+<details>
+  <summary>Click to view collapsible paragraph---Data preprocess (the monkey data)</summary>
+# Data preprocess for ECOG data.
+- Step 1. Download the data from http://neurotycho.org/expdatalist/listview?task=67
+- Step 2. Run "01Read_preprocessing.R" in R
+- Step 3. Run "02Wavenet_preprocessing.m" in MATLAB
+- Step 4. Run "03aTensorize_preprocessing.R" and "03boutput_preprocessing.R" in R
+You will get "X_train_1.Rdata", "X_test_1.Rdata" and "y_all.Rdata"
+ </details>
+
+
+
 - The sfSource() of (BroadcasTR, TLR-rescaled, ENetR) will use a R file including loading (X_test_1.Rdata, X_train_1.Rdata, y_all.Rdata, idtest_matrix.Rdata, idtrain_matrix.Rdata). The data can be put in the file named data.
 
 # TLR1
