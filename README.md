@@ -109,11 +109,25 @@ If you have already installed R package snow (for the parallel computing) and th
 ```markdown
 nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 &
 ```
+<details>
+  <summary>Click to view collapsible paragraph---other methods </summary>
+ 
 - Step 4. set ./experiments/Table_1_new/TLR-rescaled as the working directory.
 - Step 5. run the following code in the the command line
 ```markdown
 nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 &
 ```
+- Step 6. set ./experiments/Table_1_new/ENetR as the working directory.
+- Step 7. run the following code in the the command line
+```markdown
+nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 &
+```
+- Step 8. go to ./experiments/Table_1_new/README.md and implemente the steps for TLR.
+
+ </details>
+
+- Remark 1: you can set the tuning parameters of BroadcasTR in ./experiments/Table_1_new/ParallelComput/parallel_source1000.R.
+- Remark 2: you can set the number of CPUs for the computation in ./experiments/Table_1_new/ParallelComput/parallel_source1000.R
 
 
 - 
@@ -233,7 +247,7 @@ In summary, all the code can be found in ./experiments, in which each subdirecto
 - Table S.2 in the supplementary: "./experiments/Supp/Table S1-S3".
   
 - Fig. S.4. in the supplementary: "./experiments/Figure 4".
-- 
+  
 - Fig. S.5. in the supplementary: "./experiments/Figure 5".
   
 - Fig. S.6. in the supplementary: "./experiments/Figure 6".
@@ -243,7 +257,8 @@ In summary, all the code can be found in ./experiments, in which each subdirecto
 - Fig. S.8. in the supplementary: "./experiments/Supp/Figure S6-S7". 
 
 - Fig. S.9. in the supplementary: "./experiments/Supp/Figure S6-S7".
--  </details>
+
+</details>
  
 
 # References
