@@ -112,7 +112,7 @@ nohup  Rscript 20230918_generate_data_new_editor.R. #You will obtain the synthet
 - Step 3. run the following code in the the command line
 ```markdown
 nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 & # the fitting results
-nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 & # ISE computation
+nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 & # compute the ISE
 ```
 <details>
   <summary>Click to view collapsible paragraph---other methods </summary>
