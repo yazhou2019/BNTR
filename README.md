@@ -109,7 +109,7 @@ If you have already installed R package snow (for the parallel computing) and th
 ```markdown
 nohup  Rscript 20230918_generate_data_new_editor.R. #You will obtain the synthetic data "Simul_n1000_rep50_final_fix_new_editor.Rdata" in "./SimResults".
 ```
-- Step 3. run the following code in the the command line
+- Step 3. run the following code in the the command line.
 ```markdown
 nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 & # obtain the fitting results
 nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 & # compute the ISE, after you obtain the fitting results
@@ -120,7 +120,7 @@ nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 & # compute the ISE
 ### For TLR-rescaled 
 - Step 1. Put the generated synthetic data in ./experiments/Table_1_new/TLR-rescaled/SimResults
 - Step 2. set ./experiments/Table_1_new/TLR-rescaled as the working directory.
-- Step 3. run the following code in the the command line
+- Step 3. run the following code in the the command line.
 ```markdown
 nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 &
 nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 &
@@ -129,7 +129,7 @@ nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 &
 ### For ENetR: 
 - Step 1. Put the generated synthetic data in ./experiments/Table_1_new/ENetR /SimResults
 - Step 2. set ./experiments/Table_1_new/ENetR as the working directory.
-- Step 3. run the following code in the the command line
+- Step 3. run the following code in the the command line.
 ```markdown
 nohup  Rscript --vanilla "SimENetR.R" > ./logs 2>&1 &
 nohup  Rscript --vanilla "ISE_SimENetR.R" > ./ISE_logs 2>&1 &
