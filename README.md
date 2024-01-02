@@ -102,12 +102,16 @@ cat("The prediction performance in these tunning parameters: \n", "MSPE =", sum(
 ```
 
 ## Table 1 Experiments in Section 5 of the main paper
-If you have already installed R package snow (for the parallel computing) and the dependences of BNTR in a linux server with multiple CPUs, you can reproduce the Table 1 in the following steps. 
-- Step 1. download all the codes in the repository
-- Step 2. set ./experiments/Table_1_new/BrodcasTR as the working directory.
+If you have already installed R package snow (for the parallel computing) and the dependences of BNTR in a linux server with multiple CPUs, you can reproduce the results of Table 1 in the following steps. 
+- Step 1. set ./experiments/Table_1_new/BrodcasTR as the working directory. 
+- Step 2. run the following code to generate the synthetic data. 
+```markdown
+nohup  Rscript 20230918_generate_data_new_editor.R. #You will obtain the synthetic data "Simul_n1000_rep50_final_fix_new_editor.Rdata" in "./SimResults".
+```
 - Step 3. run the following code in the the command line
 ```markdown
 nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 &
+nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 &
 ```
 <details>
   <summary>Click to view collapsible paragraph---other methods </summary>
@@ -116,30 +120,20 @@ nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 &
 - Step 5. run the following code in the the command line
 ```markdown
 nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 &
+nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 &
 ```
 - Step 6. set ./experiments/Table_1_new/ENetR as the working directory.
 - Step 7. run the following code in the the command line
 ```markdown
 nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 &
+nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 &
 ```
 - Step 8. go to ./experiments/Table_1_new/README.md and implemente the steps for TLR.
-
+- Step 9. Collect all the ISE results. 
  </details>
 
 - Remark 1: you can set the tuning parameters of BroadcasTR in ./experiments/Table_1_new/ParallelComput/parallel_source1000.R.
-- Remark 2: you can set the number of CPUs for the computation in ./experiments/Table_1_new/ParallelComput/parallel_source1000.R
-
-
-- 
-- Step 3. set the tuning parameters in "./experiments/example/ParallelComput/parallel_source.R"
-- Step 3. set the number of CPUs for the computation in "./experiments/example/ParallelComput/parallel_replications.R" 
-- Step 4. set "./experiments/example" as the working directory 
-- Step 5. run the following code in the command line
-```markdown
-nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 &
-```
-- Step 6. obtain the results in "./experiments/example/SimResults"  when Step 5 is done
-
+- Remark 2: you can set the number of CPUs for the computation in ./experiments/Table_1_new/ParallelComput/parallel_replications_big_1000K8_new.R
 
 
 # Experiments in the paper
