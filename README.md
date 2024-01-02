@@ -101,8 +101,9 @@ cat("The prediction performance in these tunning parameters: \n", "MSPE =", sum(
 
 ```
 
-## Example 2: for simulations in the paper 
-If you have already installed R package snow (for the parallel computing) and the dependences of BNTR in a linux server with multiple CPUs, you can reproduce the simulation in the following steps. 
+## Table 1 Experiments in Section 5 in the main paper
+If you have already installed R package snow (for the parallel computing) and the dependences of BNTR in a linux server with multiple CPUs, you can reproduce the Table 1 in the following steps. 
+
 - Step 1. download all the codes in the repository
 - Step 2. set the tuning parameters in "./experiments/example/ParallelComput/parallel_source.R"
 - Step 3. set the number of CPUs for the computation in "./experiments/example/ParallelComput/parallel_replications.R" 
