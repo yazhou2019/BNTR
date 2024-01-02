@@ -8,7 +8,7 @@
 - Remark: you need to set "./BroadcasTR" as the working directory.
 - See the file BroadcasTR. You can run SimNonLin.R and ISE_SimNonLin.R to obtain the fitting results and ISE, respectively. After you finish the codes, you will get "BNTR_500_20230918.Rdata", "BNTR_750_20230918.Rdata", "BNTR_1000_20230918.Rdata", "ise_BNTR_500_20230918.Rdata", "ise_BNTR_750_20230918.Rdata", and "ise_BNTR_1000_20230918.Rdata" in "./BroadcasTR/SimResults".
 
-Remark1: you can chose which sample size to run in SimNonLin.R. See below.
+Remark1: you can chose the sample size (n=500, 750 or 1000) in SimNonLin.R. See below.
 ```
 # The following is SimNonLin.R 
 source('./ParallelComput/parallel_replications_big_1000K8_new.R') # when you want to run the situation where the sample size n=1000 
