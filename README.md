@@ -113,23 +113,14 @@ nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 &
 ```
 - Step 6. obtain the results in "./experiments/example/SimResults"  when Step 5 is done
 
-If you want to see the code for the analyses presented in the paper, please refer to the 'Experiments in the paper' section. 
 
-
-## Example 3: for new simulations in the paper
-The new simulation data is located in "./experiments/new_simulation".
-- Fully synthetic data: "./experiments/new_simulation/FullSimPaper"
-- Simulated monkey’s electrocorticography data: "./experiments/new_simulation/RealDataSim"
-  
-The algorithm can be implemented as Example 2.
-
-If you want to see the code for the analyses presented in the paper, please refer to the 'Experiments in the paper' section. 
 
 # Experiments in the paper
-The code for the analyses presented in the paper is located in the "./experiments" directory. For the latest version, please refer to the 'Version 4' section.
+In summary, all the code can be found in ./experiments, in which each subdirectory corresponds to figures or tables in the paper
 
-In summary, all the code can be found in ./experiments, in which each subdirectory corresponds to a figure or table in the paper.
-
+<details>
+  <summary>Click to view collapsible paragraph---Old Version</summary>
+  
 ## Version 3 (The previous)
 ### The main paper (The previous)
 <details>
@@ -164,7 +155,9 @@ In summary, all the code can be found in ./experiments, in which each subdirecto
   
 - "./experiments/Supp/Table S1-S3": （1）Estimation performance of synthetic data. Reported are the averages of ISEs and the corresponding standard deviations (in parentheses) based on 50 data replications. In the first column, n is the total sample size, of which 20% were kept for the hold-out method. (the tensor covariate X and the error εj were generated such that Xi1,i2 ∼ Uniform[0,1]) (2) Estimation performance of synthetic data in Section F where the entries of tensor covariate are Beta(2, 2) distributed. Reported are the averages of ISEs and the corresponding standard deviations (in parentheses) based on 50 data replications. In the first column, n is the total sample size, of which 20% were kept for the hold-out method. (3) Reported are averages of MSPE and the corresponding standard deviations (in parentheses) based on 50 replications.(GPNTE, TVGP, BroadcasTR,X = x1 ◦ x2 ∈ R64×64, where each entry of xd was independently sampled from Uniform[0,1], d = 1,2.)
  </details>
- 
+
+  </details>
+  
 ## Version 4 (The latest)
 ### The main paper (The latest)
 - Table 1 in the main paper："./experiments/Table_1_new". Table 1. Estimation performance for the synthetic data. Reported are the averages of ISE and the corresponding standard deviations (in parentheses) based on 50 data replicates. In the first column, n is the total sample size.
