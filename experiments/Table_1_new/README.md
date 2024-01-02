@@ -11,22 +11,22 @@
 Remark1: you can chose the sample size (n=500, 750 or 1000) for SimNonLin.R by directly replace the code in SimNonLin.R. See below.
 ```
 # The following is SimNonLin.R 
-source('./ParallelComput/parallel_replications_big_1000K8_new.R') # when you want to run the situation where the sample size n=1000 
+source('./ParallelComput/parallel_replications_big_1000K8_new.R') # when you want to run the experiment where the sample size n=1000 
 
-#source('./ParallelComput/parallel_replications_big_750K7_new.R') # when you want to run the situation where the sample size n=750
+#source('./ParallelComput/parallel_replications_big_750K7_new.R') # when you want to run the experiment where the sample size n=750
 
-#source('./ParallelComput/parallel_replications_big_500K6_new.R') # when you want to run the situation where the sample size n=500
+#source('./ParallelComput/parallel_replications_big_500K6_new.R') # when you want to run the experiment where the sample size n=500
 ```
 Remark2: you can chose the sample size (n=500, 750 or 1000) for ISE_SimNonLin.R by replace the code in parallel_get_ise.R. See below. 
 ```
 # The following is a part of ./BroadcasTR/ParallelComput/parallel_get_ise.R
 
 #####
-sfSource('./ParallelComput/parallel_source_500.R') #when you want to run the situation where the sample size n=500
+sfSource('./ParallelComput/parallel_source_500.R') #when you want to run the experiment where the sample size n=500
 
-# sfSource('./ParallelComput/parallel_source_750.R') #when you want to run the situation where the sample size n=750
+# sfSource('./ParallelComput/parallel_source_750.R') #when you want to run the experiment where the sample size n=750
 
-# sfSource('./ParallelComput/parallel_source_1000.R') #when you want to run the situation where the sample size n=1000
+# sfSource('./ParallelComput/parallel_source_1000.R') #when you want to run the experiment where the sample size n=1000
 #####
 ```
 
