@@ -156,9 +156,8 @@ In summary, all the code can be found in ./experiments, in which each subdirecto
 - "./experiments/Supp/Table S1-S3": （1）Estimation performance of synthetic data. Reported are the averages of ISEs and the corresponding standard deviations (in parentheses) based on 50 data replications. In the first column, n is the total sample size, of which 20% were kept for the hold-out method. (the tensor covariate X and the error εj were generated such that Xi1,i2 ∼ Uniform[0,1]) (2) Estimation performance of synthetic data in Section F where the entries of tensor covariate are Beta(2, 2) distributed. Reported are the averages of ISEs and the corresponding standard deviations (in parentheses) based on 50 data replications. In the first column, n is the total sample size, of which 20% were kept for the hold-out method. (3) Reported are averages of MSPE and the corresponding standard deviations (in parentheses) based on 50 replications.(GPNTE, TVGP, BroadcasTR,X = x1 ◦ x2 ∈ R64×64, where each entry of xd was independently sampled from Uniform[0,1], d = 1,2.)
  </details>
 
-  </details>
   
-## Version 4 (The latest)
+## Version 4 (The latest with description)
 ### The main paper (The latest)
 - Table 1 in the main paper："./experiments/Table_1_new". Table 1. Estimation performance for the synthetic data. Reported are the averages of ISE and the corresponding standard deviations (in parentheses) based on 50 data replicates. In the first column, n is the total sample size.
 
@@ -194,6 +193,44 @@ In summary, all the code can be found in ./experiments, in which each subdirecto
 
 - Fig. S.9. in the supplementary: "./experiments/Supp/Figure S6-S7". Fig. S.9. Region selection performance for the ADNI data. The columns correspond to the slices of the tensor covariate. The rows named “Pos-” and “Neg-” are the plots of positive and negative contributions of each entry, respectively. The rows named “-TLR” and “-BroadcasTR” correspond to the tensor linear regression with rescaling strategy and the proposed broadcasted nonparametric model, respectively.
  </details>
+
+   </details>
+
+### The main paper (The latest)
+- Table 1 in the main paper："./experiments/Table_1_new".
+  
+- Table 2 in the main paper: "./experiments/Table 2". 
+
+- Table 3 in the main paper: "./experiments/Table 3".
+  
+- Fig. 4 in the main paper: "./experiments/Figure_4_new". 
+  
+### The supplementary (The latest)
+<details>
+  <summary>Click to view collapsible paragraph---The supplementary (The latest)</summary>
+ 
+- Fig. S.1. in the supplementary: "./experiments/Figure_5_new".
+  
+- Fig. S.2. in the supplementary: "./experiments/Figure_6_new". 
+
+- Fig. S.3. in the supplementary: "./experiments/Figure 7".
+
+- Table S.1. in the supplementary: "./experiments/Table 1".
+  
+- Table S.2 in the supplementary: "./experiments/Supp/Table S1-S3".
+  
+- Fig. S.4. in the supplementary: "./experiments/Figure 4".
+- 
+- Fig. S.5. in the supplementary: "./experiments/Figure 5".
+  
+- Fig. S.6. in the supplementary: "./experiments/Figure 6".
+  
+- Fig. S.7. in the supplementary: "./experiments/Supp/Figure S5". 
+
+- Fig. S.8. in the supplementary: "./experiments/Supp/Figure S6-S7". 
+
+- Fig. S.9. in the supplementary: "./experiments/Supp/Figure S6-S7".
+-  </details>
  
 
 # References
