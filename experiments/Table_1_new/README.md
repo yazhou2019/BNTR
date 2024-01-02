@@ -5,6 +5,8 @@
 
 
 # BroadcasTR
+- Remark: you need to set "./BroadcasTR" as the working directory.
+  
 - See the file BroadcasTR. You can run SimNonLin.R and ISE_SimNonLin.R to obtain the fitting results and ISE, respectively.
 
 # TLR-rescaled
