@@ -176,13 +176,15 @@ The code for the analyses presented in the paper is located in the "./experiment
 <details>
   <summary>Click to view collapsible paragraph---The supplementary (The latest)</summary>
  
-- Fig. S.1. in the supplementary: "./experiments/Figure_5_new". Fig. S.1. Region selection of BroadcasTR for the synthetic data in Section 5.1 of the main, with sample sizes n = 500, 750, and 1000. All plots share the same color scheme as shown in the color bar at the bottom.
+- Fig. S.1. in the supplementary: "./experiments/Figure_5_new". Fig. S.1. Region selection of BroadcasTR for the synthetic data in Section 5.1 of the main paper, with sample sizes n = 500, 750, and 1000. All plots share the same color scheme as shown in the color bar at the bottom.
 
-- Fig. S.2. in the supplementary: "./experiments/Figure_6_new". Fig. S.2. True and estimated entry-wise functions using BroadcasTR for the synthetic data in Section 5.1 of the main paper. The five rows correspond to Cases 1–5, respectively. The columns display the sample sizes n = 500, 750, and 1000.
+- Fig. S.2. in the supplementary: "./experiments/Figure_6_new". Fig. S.2. True and estimated entry-wise functions using BroadcasTR for the synthetic data in Section 5.1 of the main paper. The five rows correspond to Cases 1–5, respectively. The columns display sample sizes n = 500, 750, and 1000.
 
-- Fig. S.3. in the supplementary: "./experiments/Figure 7". Fig. S.3. The estimation performance of entry-wise functions for the simulated monkey’s electrocor- ticography data in Section 5.3. Each panel displays one comparison method. The entry is chosen to be the one with the median estimation error (of BroadcasTR) among all entries, in the replicate of the median performance on ISE among 10 random splits.
+- Fig. S.3. in the supplementary: "./experiments/Figure 7". Fig. S.3. The estimation performance of the entry-wise functions for the simulated monkey electro- corticography data in Section 5.3 of the main paper. Each panel displays one competing method. The entry is chosen to be the one with the median estimation error (of BroadcasTR) among all entries.
 
-- Table S.1. in the supplementary: "./experiments/Table 1". Table S.1. Estimation performance of synthetic data in Section E.2. Reported are the averages of ISEs and the corresponding standard deviations (in parentheses) based on 50 data replicates. In the first column, n is the total sample size.
+- Table S.1. in the supplementary: "./experiments/Table 1". Table S.1. Estimation performance for the synthetic data in Section E.2. Reported are the averages of ISE and the corresponding standard deviations (in parentheses) based on 50 data replicates. In the first column, n is the total sample size.
+
+
 
 - Fig. S.4. in the supplementary: "./experiments/Figure 4". Fig. S.4. Region selection of various methods for synthetic data in Section E.2 with n = 1000. The first column presents the true norm tensors corresponding to Cases 1–5, respectively. The remaining four columns depict the estimated norm tensor with median ISEs of the comparative and proposed methods. Columns from left to right respectively correspond to TLR, TLR-rescaled, ENetR, and BroadcasTR. The plots in all columns share the same color scheme as shown in the color bar at the bottom.
 
