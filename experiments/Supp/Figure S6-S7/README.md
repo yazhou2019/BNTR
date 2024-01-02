@@ -10,5 +10,5 @@ Then, you will obtain the data that can be used by BroadcasTR and TLR-rescaled.
 
 # Run methods
 - BroadcasTR: RealNonLinear_ADNI.R
-- TLR-rescaled: 
+- TLR-rescaled: RealLinear_ADNI.R
 
