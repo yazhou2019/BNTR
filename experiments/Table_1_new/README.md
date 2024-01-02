@@ -47,7 +47,7 @@ lambda=c(0.01,0.05,0.1,0.5,1,5,10,50,100,500,1000)
 
 - Remark1: you can chose the sample size (n=500, 750 or 1000) for SimLin.R and ISE_SimLin.R by replacing the code in parallel_source_linear.R. See below.
 ```
-### the floowing is a part of TLR-rescaled/ParallelComput/parallel_source_linear.R
+### The following is a part of ./TLR-rescaled/ParallelComput/parallel_source_linear.R
 
 n_use=1000 # when you want to run the experiment where the sample size n=1000. If you want to run the experiments fot the sample size n=500 or n=750, you can relace it by n_use = 500 or n_use = 750.
 ```
@@ -57,7 +57,11 @@ n_use=1000 # when you want to run the experiment where the sample size n=1000. I
 - Remark0: you need to set "./ENetR" as the working directory.
 - See the file ENetR. You can run SimENetR.R and ISE_SimENetR.R to obtain the fitting results and ISE, respectively. After you finish the codes, you will get "ENet_500_20230918.Rdata", "ENet_750_20230918.Rdata", "ENet_1000_20230918.Rdata", "ise_ENet_500_20230918.Rdata", "ise_ENet_750_20230918.Rdata", and "ise_ENet_1000_20230918.Rdata" in "./ENetR/SimResults". Note that you need to run "mkdir SimResults" before running SimENetR.R and ISE_SimENetR.R in this directory.
 
-- Remark1: 
+- Remark1: you can chose the sample size (n=500, 750 or 1000) for SimENetR.R and ISE_SimENetR.R by replacing the code in ENet_source.R. See below.
+```
+### The following is a part of .ENetR/ENetComponents/ENet_source.R
+n_use=750 #  when you want to run the experiment where the sample size n=750. If you want to run the experiments fot the sample size n=1000 or n=500, you can relace it by n_use = 1000 or n_use = 500.
+```
 
 # TLR1 (The code depends on the MATLAB code in https://hua-zhou.github.io/TensorReg/)
 - step 1: use Data_generation_to_MATLAB_new.R to transform the generated Rdata to .mat format.
