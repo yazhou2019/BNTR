@@ -7,7 +7,21 @@
 # BroadcasTR
 - Remark: you need to set "./BroadcasTR" as the working directory.
 - See the file BroadcasTR. You can run SimNonLin.R and ISE_SimNonLin.R to obtain the fitting results and ISE, respectively.
-- The tuning parameters can be set in "./BroadcasTR/ParallelComput/"
+- The tuning parameters can be set in "./BroadcasTR/ParallelComput/parallel_source_1000.R" (for the sample size n=1000), "./BroadcasTR/ParallelComput/parallel_source_750.R" (for the sample size n=750), or "./BroadcasTR/ParallelComput/parallel_source_500.R" (for the sample size n=500). To be more specific, you can set the grids of tuning parameters in the file. 
+```
+# The following is a part of parallel_source_750.R
+
+# The girds of the rank 
+R=c(1,2,3,4,5)
+
+# The grids of lambda_2
+alpha=c(0,0.5,1)
+
+# The grids of lambda_1
+lambda=c(0.01,0.05,0.1,0.5,1,5,10,50,100,500,1000)
+
+
+```
 
 # TLR-rescaled
 - See the file TLR-rescaled. You can run SimLin.R and ISE_SimLin.R to obtain the fitting results and ISE, respectively.
