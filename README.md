@@ -103,7 +103,8 @@ cat("The prediction performance in these tunning parameters: \n", "MSPE =", sum(
 
 ## Experiment 2: The synthetica data in Section 5.1 of the main paper
 If you have already installed R package snow (for the parallel computing) and the dependences of BNTR in a linux server with multiple CPUs, you can reproduce the results of Table 1 in the following steps. 
-### For BroadcasTR:
+### Table 1
+#### For BroadcasTR:
 - Step 1. set ./experiments/Table_1_new/BrodcasTR as the working directory. 
 - Step 2. run the following code to generate the synthetic data. 
 ```markdown
@@ -117,7 +118,7 @@ nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 & # compute the ISE
 <details>
   <summary>Click to view collapsible paragraph---other methods </summary>
   
-### For TLR-rescaled 
+#### For TLR-rescaled 
 - Step 1. Put the generated synthetic data in ./experiments/Table_1_new/TLR-rescaled/SimResults
 - Step 2. set ./experiments/Table_1_new/TLR-rescaled as the working directory.
 - Step 3. run the following code in the the command line.
@@ -126,7 +127,7 @@ nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 &
 nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 &
 ```
 
-### For ENetR: 
+#### For ENetR: 
 - Step 1. Put the generated synthetic data in ./experiments/Table_1_new/ENetR /SimResults
 - Step 2. set ./experiments/Table_1_new/ENetR as the working directory.
 - Step 3. run the following code in the the command line.
@@ -135,13 +136,15 @@ nohup  Rscript --vanilla "SimENetR.R" > ./logs 2>&1 &
 nohup  Rscript --vanilla "ISE_SimENetR.R" > ./ISE_logs 2>&1 &
 ```
 
-### For TLR: 
+#### For TLR: 
 - Step 1. go to ./experiments/Table_1_new/README.md and run the steps for TLR.
  </details>
-
+ 
 - Remark 1: you can set the tuning parameters of BroadcasTR in ./experiments/Table_1_new/ParallelComput/parallel_source1000.R.
 - Remark 2: you can set the number of CPUs for the computation in ./experiments/Table_1_new/ParallelComput/parallel_replications_big_1000K8_new.R
 - Remark 3: for more details, please refer to ./experiments/Table_1_new/README.md.
+- Remark 4: For Fig. S.1. and Fig. S.2. in the supplementary, please refore to ./experiments/Figure_5_new and ./experiments/Figure_6_new, respectively.
+
 
 ## Experiment 3: The real data analysis in Section 5.2 of the main paper
 
