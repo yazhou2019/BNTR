@@ -140,20 +140,21 @@ nohup  Rscript --vanilla "ISE_SimENetR.R" > ./ISE_logs 2>&1 &
  </details>
  
 - Remark 1: You need to install the R package snow (for the parallel computing) and the dependences of BNTR in a linux server.
-- Remark 2: You can set the tuning parameters of BroadcasTR in ./experiments/Table_1_new/ParallelComput/parallel_source1000.R. 
-- Remark 3: You can set the number of CPUs for the computation in ./experiments/Table_1_new/ParallelComput/parallel_replications_big_1000K8_new.R
-- Remark 4: For more details, please refer to ./experiments/Table_1_new/README.md.
+- Remark 2: You can set the tuning parameters of BroadcasTR in ./experiments/Table_1_new/ParallelComput/parallel_source1000.R. for the sample size n=1000.
+- Remark 3: You can set the number of CPUs for the computation in ./experiments/Table_1_new/ParallelComput/parallel_replications_big_1000K8_new.R for the sample size n=1000. 
+- Remark 4: For more details, please refer to ./experiments/Table_1_new.
 - Remark 5: For Fig. S.1. and Fig. S.2. in the supplementary, please refer to ./experiments/Figure_5_new and ./experiments/Figure_6_new, respectively.
 
 
 ## Experiment 3: The real data analysis in Section 5.2 of the main paper
-You can 
+For the code to reproduce Table 2 in the main paper, please refer to ./experiments/Table 2. You can obtain the results by using the following steps. 
 - Step 1. Download the data from http://neurotycho.org/expdatalist/listview?task=67
-- Step 2. Run "01Read_preprocessing.R" in R
-- Step 3. Run "02Wavenet_preprocessing.m" in MATLAB
-- Step 4. Run "03aTensorize_preprocessing.R" and "03boutput_preprocessing.R" in R You will get "X_train_1.Rdata", "X_test_1.Rdata" and "y_all.Rdata"
+- Step 2. Set ./experiments/Table 2 as the working directory.
+- Step 2. For data preprocessing, please follow the steps in ./experiments/Table 2/ECOG_observation/README.md. You will obtain X_test_1.Rdata, X_train_1.Rdata, y_all.Rdata. 
+- Step 3. Run "RealNonLin.R", "RealTLR-rescaled.R",and "RealENet.R" to obtain the results of BroadcasTR, TLR-rescaled, ENetR, respectively. For TLR1, please refer to ./experiments/Table 2/README.md. 
 
-
+- Remark 1: The data spliting follows /ECOG_observation/idtest_matrix.Rdata and ./ECOG_observation/idtrain_matrix.Rdata. 
+- Remark 2: For more details, please refer to ./experiments/Table 2.
 
 
 
