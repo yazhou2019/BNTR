@@ -12,8 +12,8 @@ install.packages("devtools")
 devtools::install_github("yazhou2019/BNTR/BNTR")
 ```
 
-# Examples 
-## Example 1: for a 32-by-32 input
+# Experiments  
+## Experiment 1: A toy example for a 32-by-32 input (not in the paper)
 The following is a simple example for the 32-by-32 input. It can be implemented after the package BNTR is installed.
 
 ```markdown
@@ -101,7 +101,7 @@ cat("The prediction performance in these tunning parameters: \n", "MSPE =", sum(
 
 ```
 
-## Table 1 Experiments in Section 5 of the main paper
+## Experiment 2: The synthetica data in Section 5.1 of the main paper
 If you have already installed R package snow (for the parallel computing) and the dependences of BNTR in a linux server with multiple CPUs, you can reproduce the results of Table 1 in the following steps. 
 ### For BroadcasTR:
 - Step 1. set ./experiments/Table_1_new/BrodcasTR as the working directory. 
@@ -142,6 +142,15 @@ nohup  Rscript --vanilla "ISE_SimENetR.R" > ./ISE_logs 2>&1 &
 - Remark 1: you can set the tuning parameters of BroadcasTR in ./experiments/Table_1_new/ParallelComput/parallel_source1000.R.
 - Remark 2: you can set the number of CPUs for the computation in ./experiments/Table_1_new/ParallelComput/parallel_replications_big_1000K8_new.R
 - Remark 3: for more details, please refer to ./experiments/Table_1_new/README.md.
+
+## Experiment 3: The real data analysis in Section 5.2 of the main paper
+
+
+## Experiment 4: The simulated monkey electrocorticography data in Section 5.3 of the main paper
+
+
+
+
 
 # Experiments in the paper
 In summary, all the code can be found in ./experiments, in which each subdirectory corresponds to figures or tables in the paper
