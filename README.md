@@ -102,7 +102,7 @@ cat("The prediction performance in these tunning parameters: \n", "MSPE =", sum(
 ```
 
 ## Experiment 2: The synthetica data in Section 5.1 of the main paper
-The code to reproduce Table 1 in the main paper is located in the './experiments/Table_1_new' directory.
+For the code to reproduce Table 1 in the main paper, please refer to ./experiments/Table_1_new. You can obtain the simulation results by using the following steps. 
 #### For BroadcasTR:
 - Step 1. set ./experiments/Table_1_new/BrodcasTR as the working directory. 
 - Step 2. run the following code to generate the synthetic data. 
