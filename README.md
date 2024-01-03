@@ -103,7 +103,6 @@ cat("The prediction performance in these tunning parameters: \n", "MSPE =", sum(
 
 ## Experiment 2: The synthetica data in Section 5.1 of the main paper
 If you have already installed R package snow (for the parallel computing) and the dependences of BNTR in a linux server with multiple CPUs, you can reproduce the results of Table 1 in the following steps. 
-### Table 1
 #### For BroadcasTR:
 - Step 1. set ./experiments/Table_1_new/BrodcasTR as the working directory. 
 - Step 2. run the following code to generate the synthetic data. 
