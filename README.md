@@ -102,7 +102,7 @@ cat("The prediction performance in these tunning parameters: \n", "MSPE =", sum(
 ```
 
 ## Experiment 2: The synthetica data in Section 5.1 of the main paper
-If you have already installed R package snow (for the parallel computing) and the dependences of BNTR in a linux server with multiple CPUs, you can reproduce the results of Table 1 in the following steps. 
+The code to reproduce Table 1 in the main paper is located in the './experiments/Table_1_new' directory.
 #### For BroadcasTR:
 - Step 1. set ./experiments/Table_1_new/BrodcasTR as the working directory. 
 - Step 2. run the following code to generate the synthetic data. 
@@ -139,13 +139,22 @@ nohup  Rscript --vanilla "ISE_SimENetR.R" > ./ISE_logs 2>&1 &
 - Step 1. go to ./experiments/Table_1_new/README.md and run the steps for TLR.
  </details>
  
-- Remark 1: you can set the tuning parameters of BroadcasTR in ./experiments/Table_1_new/ParallelComput/parallel_source1000.R.
-- Remark 2: you can set the number of CPUs for the computation in ./experiments/Table_1_new/ParallelComput/parallel_replications_big_1000K8_new.R
-- Remark 3: for more details, please refer to ./experiments/Table_1_new/README.md.
-- Remark 4: For Fig. S.1. and Fig. S.2. in the supplementary, please refore to ./experiments/Figure_5_new and ./experiments/Figure_6_new, respectively.
+- Remark 1: You need to install the R package snow (for the parallel computing) and the dependences of BNTR in a linux server.
+- Remark 2: You can set the tuning parameters of BroadcasTR in ./experiments/Table_1_new/ParallelComput/parallel_source1000.R. 
+- Remark 3: You can set the number of CPUs for the computation in ./experiments/Table_1_new/ParallelComput/parallel_replications_big_1000K8_new.R
+- Remark 4: For more details, please refer to ./experiments/Table_1_new/README.md.
+- Remark 5: For Fig. S.1. and Fig. S.2. in the supplementary, please refer to ./experiments/Figure_5_new and ./experiments/Figure_6_new, respectively.
 
 
 ## Experiment 3: The real data analysis in Section 5.2 of the main paper
+You can 
+- Step 1. Download the data from http://neurotycho.org/expdatalist/listview?task=67
+- Step 2. Run "01Read_preprocessing.R" in R
+- Step 3. Run "02Wavenet_preprocessing.m" in MATLAB
+- Step 4. Run "03aTensorize_preprocessing.R" and "03boutput_preprocessing.R" in R You will get "X_train_1.Rdata", "X_test_1.Rdata" and "y_all.Rdata"
+
+
+
 
 
 ## Experiment 4: The simulated monkey electrocorticography data in Section 5.3 of the main paper
