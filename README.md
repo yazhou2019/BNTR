@@ -151,7 +151,13 @@ For the code to reproduce Table 2 in the main paper, please refer to ./experimen
 - Step 1. Download the data from http://neurotycho.org/expdatalist/listview?task=67
 - Step 2. For data preprocessing, please follow the steps in ./experiments/Table 2/ECOG_observation/README.md. After you finish the data preprocessing, you will obtain X_test_1.Rdata, X_train_1.Rdata, and y_all.Rdata. 
 - Step 3. Set ./experiments/Table 2 as the working directory. 
-- Step 4. Run "RealNonLin.R", "RealTLR-rescaled.R",and "RealENet.R" to obtain the results of BroadcasTR, TLR-rescaled, ENetR, respectively. For TLR1, please refer to ./experiments/Table 2/README.md. 
+- Step 4. Run the following code in the the command line.
+```markdown
+nohup  Rscript --vanilla "RealNonLin.R" > ./BroadcasTR_logs 2>&1 & # for BroadcasTR
+nohup  Rscript --vanilla "RealTLR-rescaled.R" > ./RealTLR2_logs 2>&1 & # for TLR-rescaled
+nohup  Rscript --vanilla "RealENet.R" > ./ENet_logs 2>&1 & # for ENetR
+```
+As for TLR1, please refer to ./experiments/Table 2/README.md. 
 
 - Remark 1: You also need to install the R package snow (for the parallel computing) and the dependences of BNTR in a linux server.
 - Remark 2: The data spliting follows ./data/idtest_matrix.Rdata and ./data/idtrain_matrix.Rdata. 
