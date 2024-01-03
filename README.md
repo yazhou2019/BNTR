@@ -104,12 +104,12 @@ cat("The prediction performance in these tunning parameters: \n", "MSPE =", sum(
 ## Experiment 2: The synthetica data in Section 5.1 of the main paper
 For the code to reproduce Table 1 in the main paper, please refer to ./experiments/Table_1_new. You can obtain the simulation results by using the following steps. 
 #### For BroadcasTR:
-- Step 1. set ./experiments/Table_1_new/BrodcasTR as the working directory. 
-- Step 2. run the following code to generate the synthetic data. 
+- Step 1. Set ./experiments/Table_1_new/BrodcasTR as the working directory. 
+- Step 2. Run the following code to generate the synthetic data. 
 ```markdown
 nohup  Rscript 20230918_generate_data_new_editor.R. #You will obtain the synthetic data "Simul_n1000_rep50_final_fix_new_editor.Rdata" in "./SimResults".
 ```
-- Step 3. run the following code in the the command line.
+- Step 3. Run the following code in the the command line.
 ```markdown
 nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 & # obtain the fitting results
 nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 & # compute the ISE, after you obtain the fitting results
@@ -119,8 +119,8 @@ nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 & # compute the ISE
   
 #### For TLR-rescaled 
 - Step 1. Put the generated synthetic data in ./experiments/Table_1_new/TLR-rescaled/SimResults
-- Step 2. set ./experiments/Table_1_new/TLR-rescaled as the working directory.
-- Step 3. run the following code in the the command line.
+- Step 2. Set ./experiments/Table_1_new/TLR-rescaled as the working directory.
+- Step 3. Run the following code in the the command line.
 ```markdown
 nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 &
 nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 &
@@ -128,15 +128,15 @@ nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 &
 
 #### For ENetR: 
 - Step 1. Put the generated synthetic data in ./experiments/Table_1_new/ENetR /SimResults
-- Step 2. set ./experiments/Table_1_new/ENetR as the working directory.
-- Step 3. run the following code in the the command line.
+- Step 2. Set ./experiments/Table_1_new/ENetR as the working directory.
+- Step 3. Run the following code in the the command line.
 ```markdown
 nohup  Rscript --vanilla "SimENetR.R" > ./logs 2>&1 &
 nohup  Rscript --vanilla "ISE_SimENetR.R" > ./ISE_logs 2>&1 &
 ```
 
 #### For TLR: 
-- Step 1. go to ./experiments/Table_1_new/README.md and run the steps for TLR.
+- Go to ./experiments/Table_1_new/README.md and run the steps for TLR.
  </details>
  
 - Remark 1: You need to install the R package snow (for the parallel computing) and the dependences of BNTR in a linux server.
@@ -149,12 +149,12 @@ nohup  Rscript --vanilla "ISE_SimENetR.R" > ./ISE_logs 2>&1 &
 ## Experiment 3: The real data analysis in Section 5.2 of the main paper
 For the code to reproduce Table 2 in the main paper, please refer to ./experiments/Table 2. You can obtain the results by using the following steps. 
 - Step 1. Download the data from http://neurotycho.org/expdatalist/listview?task=67
-- Step 2. For data preprocessing, please follow the steps in ./experiments/Table 2/ECOG_observation/README.md. You will obtain X_test_1.Rdata, X_train_1.Rdata, y_all.Rdata. 
-- Step 3 Set ./experiments/Table 2 as the working directory. Create a directory named data and move X_test_1.Rdata, X_train_1.Rdata, y_all.Rdata into ./data.
+- Step 2. For data preprocessing, please follow the steps in ./experiments/Table 2/ECOG_observation/README.md. After you finish the data preprocessing, you will obtain X_test_1.Rdata, X_train_1.Rdata, and y_all.Rdata. 
+- Step 3. Set ./experiments/Table 2 as the working directory. 
 - Step 4. Run "RealNonLin.R", "RealTLR-rescaled.R",and "RealENet.R" to obtain the results of BroadcasTR, TLR-rescaled, ENetR, respectively. For TLR1, please refer to ./experiments/Table 2/README.md. 
 
 - Remark 1: You also need to install the R package snow (for the parallel computing) and the dependences of BNTR in a linux server.
-- Remark 2: The data spliting follows /ECOG_observation/idtest_matrix.Rdata and ./ECOG_observation/idtrain_matrix.Rdata. 
+- Remark 2: The data spliting follows ./data/idtest_matrix.Rdata and ./data/idtrain_matrix.Rdata. 
 - Remark 3: For more details, please refer to ./experiments/Table 2.
 
 
