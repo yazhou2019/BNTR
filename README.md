@@ -207,7 +207,7 @@ In summary, all the code can be found in ./experiments, in which each subdirecto
   
 ### The supplementary material (the current version under review) 
 <details>
-  <summary>Click to view collapsible paragraph---The supplementary material (The latest)</summary>
+  <summary>Click to view collapsible paragraph---The supplementary material</summary>
  
 - Fig. S.1. in the supplementary material: "./experiments/Figure_5_new".
   
