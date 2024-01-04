@@ -185,7 +185,7 @@ As for TLR, please refer to the "TLR1" section of ./experiments/Table 3/RealData
 
 - Remark 1: You also need to install the R package snow (for the parallel computing) and the dependences of BNTR in a linux server.
 - Remark 2: For more details, please refer to ./experiments/Table 3/RealDataSim.
-- Remark 3: For Fig. S.3. in the supplementary, please refer to ./experiments/Table 3. 
+- Remark 3: For Fig. S.3. in the supplementary material, please refer to ./experiments/Table 3. 
 
 ## Other Experiments : Extra simulations in the supplementary material
 For other experiments, please refer to the "File Description List" secition. For example, the item (Table S.1. in the supplementary material: "./experiments/Table 1") implies that the code to reproduce Table S.1 is located in the "./experiments/Table 1" directory. 
@@ -195,84 +195,6 @@ For other experiments, please refer to the "File Description List" secition. For
 # File Description List
 In summary, all the code can be found in ./experiments, in which each subdirectory corresponds to figures or tables in the paper. 
 
-<details>
-  <summary>Click to view collapsible paragraph---old version</summary>
-## Version 3 (The previous)
-### The main paper (The previous)
-<details>
-  <summary>Click to view collapsible paragraph---The main paper (The previous)</summary>
- 
-- "./experiments/Table 1":  Estimation performance in synthetic data. Reported are the averages of ISEs and the corresponding standard deviations (in parentheses) based on 50 data replications. In the first column, n is the total sample size, of which 20% were kept for the hold-out method. (X is generated from a mixture of multivariate truncated normal distribution with a Toeplitz variance matrix on the support and point mass distribution on the boundaries.)
- 
-- "./experiments/Table 2": Prediction performance on the monkey’s electrocorticography data. Reported are averages of MSPE and the corresponding standard deviations (in parentheses) based on 10 random splittings.
-  
-- "./experiments/Table 3": Prediction performance on the simulated monkey’s electrocorticography data. Reported are averages of MSPE and the corresponding standard deviations (in parentheses) based on 10 random splittings.
-  
-- "./experiments/Figure 4": Region selection of TLR, TLR-rescaled, ENetR, and BroadcasTR for n = 1000, of which 20% were for the hold-out method. The first column presents the true norm tensors corresponding to Cases 1–5, respectively. The rest four columns depict the estimated norm tensor with median ISEs of the comparative and proposed methods. Columns from left to right respectively correspond to TLR, TLR-rescaled, ENetR, and BroadcasTR. The plots in all columns share the same color scheme as shown in the color bar at the bottom. (X is generated from a mixture of multivariate truncated normal distribution with a Toeplitz variance matrix on the support and point mass distribution on the boundaries.)
-  
-- "./experiments/Figure 5": Region selection of BroadcasTR for Cases 1–5, with various sample size n = 500, 750, and 1000 (where 20% data are used for the hold-out method). All plots share the same color scheme as shown in the color bar at the bottom.(X is generated from a mixture of multivariate truncated normal distribution with a Toeplitz variance matrix on the support and point mass distribution on the boundaries.)
-  
-- "./experiments/Figure 6": The plot of the true and estimated entry-wise functions using BroadcasTR. From the first row to the fifth row correspond to Cases 1–5, respectively. From left to right are respectively the sample sizes n = 500, 750, and 1000. (X is generated from a mixture of multivariate truncated normal distribution with a Toeplitz variance matrix on the support and point mass distribution on the boundaries.)
-  
-- "./experiments/Figure 7": The estimation performance of entry-wise functions for the simulated monkey’s electrocorticography data. Each panel is the result of one comparing method. The entry is chosen to be the one with the median ISE (of BroadcasTR) among all entires, in the replicate with the median performance among 10 replicates of random splitting.
- </details>
- 
-### The supplementary material (The previous)
-<details>
-  <summary>Click to view collapsible paragraph---The supplementary material (The previous)</summary>
- 
-- "./experiments/Supp/Figure S1-S3": (1)Region selection of TLR, TLR-rescaled, ENetR, and BroadcasTR for synthetic data in Section E with n = 1000, of which 20% were for the hold-out method. The first column presents the true norm tensors corresponding to Cases 1–5, respectively. The rest four columns de- pict the estimated norm tensor with median ISEs of the comparative and proposed methods. Columns from left to right respectively correspond to TLR, TLR-rescaled, ENetR, and BroadcasTR. The plots in all columns share the same color scheme as shown in the color bar at the bottom. (2)Region selection of BroadcasTR for Cases 1–5 (from the first to the fifth row) in Section E, with various sample size n = 500, 750, and 1000 (where 20% data are used for the hold-out method). All plots share the same color scheme as shown in the color bar at the bottom. (3)The plot of the true and estimated entry-wise functions using BroadcasTR for synthetic data in Section E. From the first row to the fifth row correspond to Cases 1–5, respectively. From left to right are respectively the sample sizes n = 500, 750, and 1000. (The tensor covariate X and the error εj were generated such that Xi1,i2 ∼ Uniform[0,1])
-
-- "./experiments/Supp/Figure S4": Estimated tensor norms of BroadcasTR for Cases 1–5 (from the first to the fifth row) in Section F where the entries of tensor covariate are Beta(2, 2) distributed. From left to right correspond to sample sizes n = 500, 750, 1000 (of which 20% data are used for the hold-out method). All plots share the same color scheme as shown in the color bar at the bottom.
-  
-- "./experiments/Supp/Figure S5":The LHS (LHSloss) and RHS (RHSobj) of (A.11) in Case 2 of the synthetic data in Section E. The first row show these two quantities based on 50 replications after validation, when n = 500 and n = 1000. The second row depicts the differences (RHSobj - LHSloss) accordingly.
-  
-- "./experiments/Supp/Figure S6-S7": (1)Prediction performance on the ADNI data. The left and right boxplots are respectively the classification accuracy of BroadcasTR and TLR-rescaled based on 10 random splittings. (2)Region selection performance on the ADNI data. The columns correspond to the slices of the tensor covariate. The rows named “Pos-” and “Neg-” are the plots of positive and negative contributions of each entry, respectively. The rows named “-TLR” and “-BroadcasTR” correspond to the tensor linear regression with rescaling strategy and the proposed broadcasted nonparametric model, respectively.
-  
-- "./experiments/Supp/Table S1-S3": （1）Estimation performance of synthetic data. Reported are the averages of ISEs and the corresponding standard deviations (in parentheses) based on 50 data replications. In the first column, n is the total sample size, of which 20% were kept for the hold-out method. (the tensor covariate X and the error εj were generated such that Xi1,i2 ∼ Uniform[0,1]) (2) Estimation performance of synthetic data in Section F where the entries of tensor covariate are Beta(2, 2) distributed. Reported are the averages of ISEs and the corresponding standard deviations (in parentheses) based on 50 data replications. In the first column, n is the total sample size, of which 20% were kept for the hold-out method. (3) Reported are averages of MSPE and the corresponding standard deviations (in parentheses) based on 50 replications.(GPNTE, TVGP, BroadcasTR,X = x1 ◦ x2 ∈ R64×64, where each entry of xd was independently sampled from Uniform[0,1], d = 1,2.)
- </details>
-
-  
-## Version 4 (The latest with description)
-### The main paper (The latest)
-- Table 1 in the main paper："./experiments/Table_1_new". Table 1. Estimation performance for the synthetic data. Reported are the averages of ISE and the corresponding standard deviations (in parentheses) based on 50 data replicates. In the first column, n is the total sample size.
-
-- Table 2 in the main paper: "./experiments/Table 2". Table 2. Prediction performance for the monkey electrocorticography data. Reported are the averages of MSPE and the corresponding standard deviations (in parentheses) based on 10 random splits. (The monkey’s electrocorticography data is preprocessed by the file in "./experiments/Table 2/ECOG_observation". )
-
-- Table 3 in the main paper: "./experiments/Table 3". Table 3. Prediction performance for the simulated monkey electrocorticography data. Reported are the averages of MSPE and the corresponding standard deviations (in parentheses) based on 10 random splits.
-
-- Fig. 4 in the main paper: "./experiments/Figure_4_new". Fig. 4. Region selection of the competing methods for n = 1000. The first column presents the true norm tensors in Cases 1–5. The remaining four columns display the estimated norm tensors corresponding to the replicate of the upper median ISE performance for the competing methods. The columns from left to right correspond to TLR, TLR-rescaled, ENetR, and BroadcasTR, respectively. The plots in all columns share the same color scheme as shown in the color bar at the bottom.
-  
-### The supplementary material (The latest)
-<details>
-  <summary>Click to view collapsible paragraph---The supplementary material (The latest)</summary>
- 
-- Fig. S.1. in the supplementary material: "./experiments/Figure_5_new". Fig. S.1. Region selection of BroadcasTR for the synthetic data in Section 5.1 of the main paper, with sample sizes n = 500, 750, and 1000. All plots share the same color scheme as shown in the color bar at the bottom.
-
-- Fig. S.2. in the supplementary material: "./experiments/Figure_6_new". Fig. S.2. True and estimated entry-wise functions using BroadcasTR for the synthetic data in Section 5.1 of the main paper. The five rows correspond to Cases 1–5, respectively. The columns display sample sizes n = 500, 750, and 1000.
-
-- Fig. S.3. in the supplementary material: "./experiments/Figure 7". Fig. S.3. The estimation performance of the entry-wise functions for the simulated monkey electro- corticography data in Section 5.3 of the main paper. Each panel displays one competing method. The entry is chosen to be the one with the median estimation error (of BroadcasTR) among all entries.
-
-- Table S.1. in the supplementary material: "./experiments/Table 1". Table S.1. Estimation performance for the synthetic data in Section E.2. Reported are the averages of ISE and the corresponding standard deviations (in parentheses) based on 50 data replicates. In the first column, n is the total sample size.
-
-- Table S.2 in the supplementary material: "./experiments/Supp/Table S1-S3". Table S.2. Prediction performance for the synthetic data in Section E.3. Reported are the averages of MSPE and the corresponding standard deviations (in parentheses) based on 50 replicates.
-
-- Fig. S.4. in the supplementary material: "./experiments/Figure 4". Fig. S.4. Region selection of the competing methods for the synthetic data in Section E.2 (n = 1000). The first column presents the true norm tensors in Cases 1–5. The remaining four columns display the estimated norm tensors corresponding to the replicate of the upper median ISE performance for the competing methods. The columns from left to right correspond to TLR, TLR-rescaled, ENetR, and BroadcasTR, respectively. The plots in all columns share the same color scheme as shown in the color bar at the bottom.
-
-- Fig. S.5. in the supplementary material: "./experiments/Figure 5". Fig. S.5. Region selection of BroadcasTR for Cases 1–5 (from the first to the fifth row) in Section E.2, with sample sizes n = 500, 750, and 1000. All plots share the same color scheme as shown in the color bar at the bottom.
-
-- Fig. S.6. in the supplementary material: "./experiments/Figure 6". Fig. S.6. True and estimated entry-wise functions using BroadcasTR for the synthetic data in Section E.2. The five rows correspond to Cases 1–5, respectively. The columns display sample sizes n = 500, 750, and 1000.
-
-- Fig. S.7. in the supplementary material: "./experiments/Supp/Figure S5". Fig. S.7. The LHS (LHSloss) and RHS (RHSobj) of (B.10) in Case 2 of the synthetic data in Section 5.1 of the main paper. The first row show these two quantities based on 50 replicates after vali- dation, when n = 500 and n = 1000. The second row depicts the differences (RHSobj - LHSloss) accordingly.
-
-- Fig. S.8. in the supplementary material: "./experiments/Supp/Figure S6-S7". Fig. S.8. Prediction performance for the ADNI data. The left and right boxplots are respectively the classification accuracy of BroadcasTR and TLR-rescaled based on 10 random splits.
-
-- Fig. S.9. in the supplementary material: "./experiments/Supp/Figure S6-S7". Fig. S.9. Region selection performance for the ADNI data. The columns correspond to the slices of the tensor covariate. The rows named “Pos-” and “Neg-” are the plots of positive and negative contributions of each entry, respectively. The rows named “-TLR” and “-BroadcasTR” correspond to the tensor linear regression with rescaling strategy and the proposed broadcasted nonparametric model, respectively.
- </details>
-
-   </details>
-
-</details>
 
 ### The main paper (The latest)
 - Table 1 in the main paper："./experiments/Table_1_new".
