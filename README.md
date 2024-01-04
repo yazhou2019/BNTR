@@ -196,7 +196,7 @@ For other experiments, please refer to the "File Description List" secition. For
 In summary, all the code can be found in ./experiments, in which each subdirectory corresponds to figures or tables in the paper. 
 
 
-### The main paper (The latest)
+### The main paper (the current version under review) 
 - Table 1 in the main paper："./experiments/Table_1_new".
   
 - Table 2 in the main paper: "./experiments/Table 2". 
@@ -205,7 +205,7 @@ In summary, all the code can be found in ./experiments, in which each subdirecto
   
 - Fig. 4 in the main paper: "./experiments/Figure_4_new". 
   
-### The supplementary material (The latest)
+### The supplementary material (the current version under review) 
 <details>
   <summary>Click to view collapsible paragraph---The supplementary material (The latest)</summary>
  
