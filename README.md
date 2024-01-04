@@ -109,7 +109,7 @@ For the code to reproduce Table 1 in the main paper, please refer to ./experimen
 ```markdown
 nohup  Rscript 20230918_generate_data_new_editor.R. #You will obtain the synthetic data "Simul_n1000_rep50_final_fix_new_editor.Rdata" in "./SimResults".
 ```
-- Step 3. Run the following code in the the command line.
+- Step 3. Run the following code in the command line.
 ```markdown
 nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 & # obtain the fitting results
 nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 & # compute the ISE, after you obtain the fitting results
@@ -120,7 +120,7 @@ nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 & # compute the ISE
 #### For TLR-rescaled 
 - Step 1. Put the generated synthetic data in ./experiments/Table_1_new/TLR-rescaled/SimResults
 - Step 2. Set ./experiments/Table_1_new/TLR-rescaled as the working directory.
-- Step 3. Run the following code in the the command line.
+- Step 3. Run the following code in the command line.
 ```markdown
 nohup  Rscript --vanilla "SimNonLin.R" > ./logs 2>&1 &
 nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 &
@@ -129,21 +129,23 @@ nohup  Rscript --vanilla "ISE_SimNonLin.R" > ./ISE_logs 2>&1 &
 #### For ENetR: 
 - Step 1. Put the generated synthetic data in ./experiments/Table_1_new/ENetR /SimResults
 - Step 2. Set ./experiments/Table_1_new/ENetR as the working directory.
-- Step 3. Run the following code in the the command line.
+- Step 3. Run the following code in the command line.
 ```markdown
 nohup  Rscript --vanilla "SimENetR.R" > ./logs 2>&1 &
 nohup  Rscript --vanilla "ISE_SimENetR.R" > ./ISE_logs 2>&1 &
 ```
 
 #### For TLR: 
-- Go to ./experiments/Table_1_new/README.md and run the steps for TLR.
+- Plase refer to the "TLR1" section in./experiments/Table_1_new/README.md.
+
  </details>
  
 - Remark 1: You need to install the R package snow (for the parallel computing) and the dependences of BNTR in a linux server.
 - Remark 2: You can set the tuning parameters of BroadcasTR in ./experiments/Table_1_new/ParallelComput/parallel_source1000.R. for the sample size n=1000.
 - Remark 3: You can set the number of CPUs for the computation in ./experiments/Table_1_new/ParallelComput/parallel_replications_big_1000K8_new.R for the sample size n=1000. 
 - Remark 4: For more details, please refer to ./experiments/Table_1_new.
-- Remark 5: For Fig. S.1. and Fig. S.2. in the supplementary, please refer to ./experiments/Figure_5_new and ./experiments/Figure_6_new, respectively.
+- Remark 5: For Fig. 4 in the main paper, please refer to ./experiments/Figure_4_new. 
+- Remark 6: For Fig. S.1. and Fig. S.2. in the supplementary, please refer to ./experiments/Figure_5_new and ./experiments/Figure_6_new, respectively.
 
 
 ## Experiment 3: The real data analysis in Section 5.2 of the main paper
@@ -151,13 +153,13 @@ For the code to reproduce Table 2 in the main paper, please refer to ./experimen
 - Step 1. Download the data from http://neurotycho.org/data/20100802s1epiduralecogfoodtrackingbkentaroshimoda 
 - Step 2. For data preprocessing, please follow the steps in ./experiments/Table 2/ECOG_observation/README.md. After you finish the data preprocessing, you will obtain X_test_1.Rdata, X_train_1.Rdata, and y_all.Rdata. Move them into the ./data directory.
 - Step 3. Set ./experiments/Table 2 as the working directory. 
-- Step 4. Run the following code in the the command line.
+- Step 4. Run the following code in the command line.
 ```markdown
 nohup  Rscript --vanilla "RealNonLin.R" > ./BroadcasTR_logs 2>&1 & # for BroadcasTR
 nohup  Rscript --vanilla "RealTLR-rescaled.R" > ./RealTLR2_logs 2>&1 & # for TLR-rescaled
 nohup  Rscript --vanilla "RealENet.R" > ./ENet_logs 2>&1 & # for ENetR
 ```
-As for TLR1, please refer to ./experiments/Table 2/README.md. 
+As for TLR, please refer to the "TLR1" section of ./experiments/Table 2/README.md. 
 
 - Remark 1: You also need to install the R package snow (for the parallel computing) and the dependences of BNTR in a linux server.
 - Remark 2: The data spliting follows ./data/idtest_matrix.Rdata and ./data/idtrain_matrix.Rdata. 
@@ -166,17 +168,32 @@ As for TLR1, please refer to ./experiments/Table 2/README.md.
 
 
 ## Experiment 4: The simulated monkey electrocorticography data in Section 5.3 of the main paper
+For the code to reproduce Table 3 in the main paper, please refer to ./experiments/Table 3/RealDataSim. You can obtain the results by using the following steps. 
+- Step 1. Move X_test_1.Rdata, X_train_1.Rdata, and y_all.Rdata (generated in the step 2 of Experiment 3) and monkey_1_new_K11_tuning.Rdata (generated in the step 4 of Experiment 3) into ./experiments/Table 3/RealDataSim/data. 
+- Step 2. Set ./experiments/Table 3/RealDataSim as the working directory.
+- Step 3. Run the following code to generate the simulated monkey electrocorticography data. 
+```markdown
+Rscript generate_real_sim_Data_new.R
+```
+- Step 4. Run the following code in the command line.
+```markdown
+nohup  Rscript --vanilla "RealNonLin_repro_K11_tuning.R" > ./BroadcasTR_logs 2>&1 & # for BroadcasTR
+nohup  Rscript --vanilla "RealTLR-rescaled.R" > ./RealTLR2_logs 2>&1 & # for TLR-rescaled
+nohup  Rscript --vanilla "RealENet.R" > ./ENet_logs 2>&1 & # for ENetR
+```
+As for TLR, please refer to the "TLR1" section of ./experiments/Table 3/RealDataSim/README.md. 
 
+- Remark 1: You also need to install the R package snow (for the parallel computing) and the dependences of BNTR in a linux server.
+- Remark 2: For more details, please refer to ./experiments/Table 3/RealDataSim.
 
+## Other Experiments : Extra simulations in the supplement
 
 
 
 # Experiments in the paper
-In summary, all the code can be found in ./experiments, in which each subdirectory corresponds to figures or tables in the paper
+In summary, all the code can be found in ./experiments, in which each subdirectory corresponds to figures or tables in the paper. 
 
-<details>
-  <summary>Click to view collapsible paragraph---Old Version</summary>
-  
+
 ## Version 3 (The previous)
 ### The main paper (The previous)
 <details>
