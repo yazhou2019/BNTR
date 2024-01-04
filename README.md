@@ -148,7 +148,7 @@ nohup  Rscript --vanilla "ISE_SimENetR.R" > ./ISE_logs 2>&1 &
 
 ## Experiment 3: The real data analysis in Section 5.2 of the main paper
 For the code to reproduce Table 2 in the main paper, please refer to ./experiments/Table 2. You can obtain the results by using the following steps. 
-- Step 1. Download the data from http://neurotycho.org/expdatalist/listview?task=67
+- Step 1. Download the data from http://neurotycho.org/data/20100802s1epiduralecogfoodtrackingbkentaroshimoda 
 - Step 2. For data preprocessing, please follow the steps in ./experiments/Table 2/ECOG_observation/README.md. After you finish the data preprocessing, you will obtain X_test_1.Rdata, X_train_1.Rdata, and y_all.Rdata. Move them into the ./data directory.
 - Step 3. Set ./experiments/Table 2 as the working directory. 
 - Step 4. Run the following code in the the command line.
