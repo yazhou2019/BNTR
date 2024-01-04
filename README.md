@@ -145,7 +145,7 @@ nohup  Rscript --vanilla "ISE_SimENetR.R" > ./ISE_logs 2>&1 &
 - Remark 3: You can set the number of CPUs for the computation in ./experiments/Table_1_new/ParallelComput/parallel_replications_big_1000K8_new.R for the sample size n=1000. 
 - Remark 4: For more details, please refer to ./experiments/Table_1_new.
 - Remark 5: For Fig. 4 in the main paper, please refer to ./experiments/Figure_4_new. 
-- Remark 6: For Fig. S.1. and Fig. S.2. in the supplementary, please refer to ./experiments/Figure_5_new and ./experiments/Figure_6_new, respectively.
+- Remark 6: For Fig. S.1. and Fig. S.2. in the supplementary material, please refer to ./experiments/Figure_5_new and ./experiments/Figure_6_new, respectively.
 
 
 ## Experiment 3: The real data analysis in Section 5.2 of the main paper
