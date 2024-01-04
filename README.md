@@ -1,6 +1,6 @@
 # BNTR: Broadcasted Nonparametric Tensor Regression
 - This package implements the method proposed in Y. Zhou, Wong, & He (2020).
-- If you want to see the code for the analyses presented in the paper, please refer to the 'Experiments in the paper' section (In summary, all the code can be found in ./experiments, in which each subdirectory corresponds to figures or tables in the paper).
+
   
 
 
@@ -188,13 +188,14 @@ As for TLR, please refer to the "TLR1" section of ./experiments/Table 3/RealData
 - Remark 3: For Fig. S.3. in the supplementary, please refer to ./experiments/Table 3. 
 
 ## Other Experiments : Extra simulations in the supplement
+For the simulation 
 
 
-
-# Experiments in the paper
+# File Description List
 In summary, all the code can be found in ./experiments, in which each subdirectory corresponds to figures or tables in the paper. 
 
-
+<details>
+  <summary>Click to view collapsible paragraph---old version</summary>
 ## Version 3 (The previous)
 ### The main paper (The previous)
 <details>
@@ -269,6 +270,8 @@ In summary, all the code can be found in ./experiments, in which each subdirecto
  </details>
 
    </details>
+
+</details>
 
 ### The main paper (The latest)
 - Table 1 in the main paper："./experiments/Table_1_new".
