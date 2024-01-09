@@ -185,7 +185,7 @@ As for TLR, please refer to the "TLR1" section of ./experiments/Table 3/RealData
 
 - Remark 1: You also need to install the R package snow (for the parallel computing) and the dependences of BNTR in a linux server.
 - Remark 2: For more details, please refer to ./experiments/Table 3/RealDataSim.
-- Remark 3: For Fig. S.3. in the supplementary material, please refer to ./experiments/Table 3. 
+- Remark 3: For Fig. S.3. in the supplementary material, please refer to ./experiments/Figure 7. 
 
 ## Other Experiments : Extra simulations in the supplementary material
 For other experiments, please refer to the "File Description List" secition. For example, the item (Table S.1. in the supplementary material: "./experiments/Table 1") implies that the code to reproduce Table S.1 is located in the "./experiments/Table 1" directory. 
