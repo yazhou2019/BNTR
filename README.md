@@ -1,7 +1,7 @@
 # BNTR: Broadcasted Nonparametric Tensor Regression
-- This package implements the method proposed in "[\[Broadcasted nonparametric tensor regression\]](https://doi.org/10.1093/jrsssb/qkae027)"：
+- This package implements the method proposed in of the paper \[Broadcasted nonparametric tensor regression\](https://doi.org/10.1093/jrsssb/qkae027)：
 ```markdown
- @article{10.1093/jrsssb/qkae027,
+ @article{zhou2024broadcasted,
     author = {Zhou, Ya and Wong, Raymond K W and He, Kejun},
     title = {Broadcasted nonparametric tensor regression},
     journal = {Journal of the Royal Statistical Society Series B: Statistical Methodology},
@@ -14,11 +14,6 @@
     doi = {10.1093/jrsssb/qkae027}
 } 
 ```
-
-
-- Zhou, Y., Wong, R. K., & He, K. (2024). Broadcasted nonparametric tensor regression. Journal of the Royal Statistical Society Series B: Statistical Methodology, Volume 86, Issue 5, November 2024, Pages 1197–1220. [\[link\]](https://academic.oup.com/jrsssb/article-abstract/86/5/1197/7637236)
-  
-
 
 # Installation
 This package can be installed via function install_github in R package devtools:
