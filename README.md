@@ -1,5 +1,5 @@
 # BNTR: Broadcasted Nonparametric Tensor Regression
-- This package implements the method proposed in of the paper \[Broadcasted nonparametric tensor regression\](https://doi.org/10.1093/jrsssb/qkae027)：
+- This package implements the method proposed in of the paper [Broadcasted nonparametric tensor regression](https://doi.org/10.1093/jrsssb/qkae027)：
 ```markdown
  @article{zhou2024broadcasted,
     author = {Zhou, Ya and Wong, Raymond K W and He, Kejun},
